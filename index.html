@@ -17,6 +17,12 @@
 .project-shortcuts{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:760px){.project-cols{grid-template-columns:1fr;gap:23px}.project-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media print{.project-cols{grid-template-columns:1.12fr 1fr;gap:24px}.project{break-before:page}.project:first-of-type{break-before:auto}.followup.compact .result-grid dd strong{font-size:15pt}}
+.phone-row{margin:26px 0 0;padding:18px;background:var(--paper);border-radius:var(--radius);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.phone-row img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line)}
+.phone-row figcaption{grid-column:1/-1;font-size:12px;color:var(--ink)}
+.phone-row figcaption span{color:var(--muted)}
+@media (max-width:760px){.phone-row{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media print{.phone-row{break-inside:avoid}}
 .case-photo{margin:26px 0 0;padding:15px;background:var(--paper);border-radius:var(--radius)}
 .case-photo img{width:100%;max-height:420px;object-fit:contain}
 .case-photo figcaption{margin-top:10px;font-size:12px;color:var(--muted)}
@@ -244,11 +250,11 @@
     <article class="project" id="case-gabolle">
       <div class="project-heading">
         <div><p class="project-kind">05 / 삼성청년SW·AI아카데미 15기 · 여행 추천 서비스</p><h3>가볼래<small>GABOLLE</small></h3></div>
-        <div class="project-meta"><p>2026.07 — 08 · PM · 배치 서버 운영</p><span class="award">삼성청년SW·AI아카데미 특화 프로젝트 우수상</span></div>
+        <div class="project-meta"><p>2026.07 — 10 · PM · 배치 서버 운영 · 정식 출시</p><span class="award">삼성청년SW·AI아카데미 특화 프로젝트 우수상</span></div>
       </div>
       <div class="project-cols">
         <div>
-          <p class="service-intro">부산을 찾은 외국인에게 취향에 맞는 현지 장소를 추천하는 서비스입니다. PM으로 팀의 개발 순서와 기준을 세웠고, 설문 186명의 응답을 취향 벡터로 바꾸는 배치 서버 운영을 맡았습니다.</p>
+          <p class="service-intro">부산을 찾은 외국인에게 취향에 맞는 현지 장소를 추천하는 서비스입니다. PM으로 팀의 개발 순서와 기준을 세웠고, 설문 186명의 응답을 취향 벡터로 바꾸는 배치 서버 운영을 맡았습니다. 프로젝트가 끝난 뒤에도 운영을 이어가 Google Play·App Store에 정식 출시했습니다.</p>
           <dl class="project-facts">
             <div><dt>제 담당</dt><dd>기획·일정 관리(PM) · Docker 배치 서버 운영</dd></div>
             <div><dt>사용 기술</dt><dd>Docker · docker stats · Jira</dd></div>
@@ -268,6 +274,43 @@
           </dl>
         </div>
       </div>
+      <figure class="phone-row" aria-label="가볼래 App Store 스크린샷">
+        <img src="img/gabolle-1-home.jpg" alt="가볼래 홈 화면" loading="lazy">
+        <img src="img/gabolle-2-trips.jpg" alt="내 여행 화면" loading="lazy">
+        <img src="img/gabolle-3-itinerary.jpg" alt="여행 일정 화면" loading="lazy">
+        <img src="img/gabolle-4-explore.jpg" alt="장소 탐색 화면" loading="lazy">
+        <img src="img/gabolle-5-feed.jpg" alt="피드 화면" loading="lazy">
+        <figcaption>App Store에 실제 등록한 화면 · 홈 · 내 여행 · 일정 · 탐색 · 피드 <span>(앱 화면은 팀 결과물입니다)</span></figcaption>
+      </figure>
+      <div class="followup">
+        <div class="followup-heading"><h4>출시 이후 · 실제 사용자 지표</h4><span class="muted" style="font-size:12px">현재 버전 1.0.6</span></div>
+        <dl class="result-grid">
+          <div><dt>새 설치</dt><dd><strong>약 95</strong></dd><p>iOS 90일 49 + Android 28일 46</p></div>
+          <div><dt>Android 월간 활성 기기</dt><dd><strong>36</strong></dd><p>직전 기간 대비 +177%</p></div>
+          <div><dt>App Store 전환 (iOS)</dt><dd><strong>106 → 49</strong></dd><p>소개 페이지 조회 → 설치</p></div>
+        </dl>
+        <p class="measurement-note">운영 중에는 장소 데이터에서 체인·깨진 항목 83곳을 숨기고 중복 18곳을 병합했습니다. 서버 상태 감시는 4번 연속 실패할 때만 알림이 가도록 해 오탐을 줄였습니다. 웹·앱 전 화면을 약 110항목 × 5개 언어로 점검했습니다.</p>
+      </div>
+      <section class="service-recording" id="gabolle-demo" aria-label="가볼래 시연">
+        <div class="service-recording-heading"><h4>여행 만들기 시연</h4><span>2026.10.07 전시회 시연 영상 · 40초</span></div>
+        <div class="service-recording-layout">
+          <video src="media/gabolle-demo-40s.mp4" poster="media/gabolle-demo-poster.jpg" controls muted loop playsinline preload="metadata"></video>
+          <div class="service-recording-copy">
+            <p>취향을 입력하고 여행을 만드는 흐름을 담았습니다. 전시회 시연 영상의 앞부분입니다.</p>
+            <p>외국인 여행자를 위해 5개 언어를 지원합니다.</p>
+            <a href="media/gabolle-demo-40s.mp4">영상 새 창에서 보기 ↗</a>
+          </div>
+        </div>
+      </section>
+      <details class="project-detail media-detail">
+        <summary>웹 화면 · 다국어 화면<span class="summary-hint">펼쳐 보기</span></summary>
+        <div class="detail-body media-grid">
+          <figure><img src="img/gabolle-pc-explore-map.jpg" alt="부산 탐색 지도" loading="lazy"><figcaption><strong>부산 탐색 지도</strong>운영 중인 웹의 사진 핀 지도</figcaption></figure>
+          <figure><img src="img/gabolle-pc-explore-card.jpg" alt="장소 카드" loading="lazy"><figcaption><strong>장소 카드</strong>지도에서 장소를 눌렀을 때 보이는 카드</figcaption></figure>
+          <figure><img src="img/gabolle-phone-home-en.jpg" alt="영어 홈 화면" loading="lazy"><figcaption><strong>영어 화면</strong>외국인 대상 5개 언어 지원</figcaption></figure>
+          <figure><img src="img/gabolle-phone-home-ja.jpg" alt="일본어 홈 화면" loading="lazy"><figcaption><strong>일본어 화면</strong>같은 홈 화면의 일본어 버전</figcaption></figure>
+        </div>
+      </details>
       <section class="deep-case" aria-label="가볼래 대표 사례">
         <p class="deep-case-label">대표 사례 · 증상에서 원인까지</p>
         <h4>1코어로 늘려서 해결됐다는 판단이 틀렸다</h4>
