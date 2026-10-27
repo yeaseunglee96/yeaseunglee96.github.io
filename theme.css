@@ -190,3 +190,6 @@ body { font-size: 17px; line-height: 1.8; }
 .profile-facts dd { color: var(--ink); }
 .profile-facts dd a { color: var(--mint-700); }
 .hero-side img.hero-cutout { filter: none; -webkit-mask-image: linear-gradient(180deg, #000 82%, transparent 100%); mask-image: linear-gradient(180deg, #000 82%, transparent 100%); }
+
+/* 요약 칸 링크 들여쓰기 제거 */
+.profile-facts dd a { padding: 0; }
