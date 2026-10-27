@@ -266,14 +266,15 @@
           <p class="service-intro"><strong>부산을 찾은 외국인에게 현지 장소를 추천하는 앱입니다. Google Play·App Store에 출시해 약 95건 설치됐습니다.</strong> 5개 언어로 지도 탐색, AI 일정, 메뉴판 번역, 긴급 도움을 제공합니다. 교육 과정의 프로젝트가 끝난 뒤에도 10월 말까지 스토어 심사 대응과 운영을 이어 갔습니다.</p>
           <dl class="project-facts">
             <div><dt>담당</dt><dd>PM · QA · 인프라·배포 · 출시·운영(스토어 심사 대응, 운영 감시, 데이터 정리)</dd></div>
-            <div><dt>사용 기술</dt><dd>Docker · GitHub Actions · Jira · App Store Connect · Play Console</dd></div>
+            <div><dt>사용 도구</dt><dd>Docker · Jenkins · GitHub Actions · Nginx · AWS Lightsail · MinIO · Jira · App Store Connect · Google Play Console</dd></div>
           </dl>
           <ul class="contribution-list">
             <li><strong>같은 기준으로 개발하기</strong><span>기획서와 데모 앱으로 방향을 먼저 맞추고, 초기 배포까지 Jira 업무 650건에 담당자와 완료 조건을 적었습니다. 기획부터 초기 배포까지 걸리는 기간을 28일에서 18일로 줄였습니다.</span></li>
             <li><strong>출시·심사 대응</strong><span>스토어 제출과 심사 반려 대응을 맡아 1.0.1부터 1.0.6까지 버전을 올렸습니다.</span></li>
             <li><strong>잘못된 알림 줄이기</strong><span>서버 상태 알림을 4번 연속 실패할 때만 보내도록 바꿔 오탐을 줄였습니다.</span></li>
             <li><strong>데이터 정리</strong><span>장소 데이터에서 체인·깨진 항목 83곳을 숨기고 중복 18곳을 병합했으며, 사진 출처를 표기했습니다.</span></li>
-            <li><strong>인프라 이전</strong><span>GitLab에서 GitHub로 저장소와 자동 배포를 옮겼습니다.</span></li>
+            <li><strong>배포 인프라 구축</strong><span>Jenkins 자동 배포 파이프라인과 Nginx 웹 서버를 구성했습니다. 이후 서버를 AWS Lightsail(gabolle.kr)로 옮기고, GitHub Actions로 검사·배포 흐름을 다시 만들었습니다.</span></li>
+            <li><strong>배포가 실패해도 서비스는 살아 있게</strong><span>배포가 겹치지 않도록 상호 배제 락을 걸고, 실패하면 직전 이미지로 자동 되돌리도록 했습니다. 컨테이너 자원 상한, 헬스체크 재시도, 실패 진단 로그 수집을 더했고 사진 저장소(MinIO) 백업을 운영했습니다.</span></li>
           </ul>
           <div class="project-links"><a class="button button-small" href="https://gabolle.kr" target="_blank" rel="noopener">gabolle.kr 열어 보기 ↗</a></div>
         </div>
