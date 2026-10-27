@@ -310,16 +310,6 @@
           <li><span>또 하나의 사례</span><p>Play 로그인이 실패했을 때 인수인계 문서는 클라이언트 ID 문제라고 했습니다. 문서를 그대로 믿지 않고 기기에서 앱 서명 지문을 직접 읽어 보니, 실제 원인은 서명 지문(assetlinks) 불일치였습니다.</p></li>
         </ol>
       </section>
-      <section class="deep-case" aria-label="가볼래 출시 후 전수 점검">
-        <p class="deep-case-label">출시 후 품질 점검 · 2026.10.22</p>
-        <h4>"출시했으니 됐다"가 아니라, 사용자 화면을 끝까지 다시 눌러 봤다</h4>
-        <ol>
-          <li><span>범위</span><p>출시판 1.0.5와 최신판 두 판에서 화면·기능 약 110항목을 점검했습니다. 한국어는 전 화면, 5개 언어는 주요 11~14화면을 확인했고, 화면에 한글이 남았는지 195장면을 기계로 점검했습니다.</p></li>
-          <li><span>방법</span><p>Claude 에이전트에게 점검을 맡기고, 저는 범위를 정하고 결과를 검토해 문제마다 분류·재현 판·근거 화면을 붙였습니다. 에뮬레이터로 확인할 수 없는 항목(iOS, 실기기, 접근성 등)은 따로 적었습니다.</p></li>
-          <li><span>결과</span><p>크래시 로그 0건, 문제 23건. 튕김 1 · 막힘 2 · 기능 오류 4 · 화면 6 · 번역 4 · 의도 확인 2 · 사소 4.</p></li>
-          <li><span>대표 원인</span><p>방문 인증에서 위치를 못 얻으면 "위치를 확인하고 있어요…"가 끝나지 않았습니다. 다른 화면에는 있는 8초 제한이 이 화면에만 빠져 있었습니다.</p></li>
-        </ol>
-      </section>
       <details class="project-detail media-detail">
         <summary>현장 도구 · 웹 화면 · 다국어 화면 · App Store 스크린샷<span class="summary-hint">펼쳐 보기</span></summary>
         <div class="detail-body media-grid">
