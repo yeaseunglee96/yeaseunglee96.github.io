@@ -159,3 +159,17 @@ body { font-size: 17px; line-height: 1.8; }
   .deep-case li { grid-template-columns: 1fr; gap: 4px; }
   .result-grid dd strong { font-size: 24px; }
 }
+
+/* 히어로 인물 컷아웃 */
+.hero { grid-template-columns: minmax(0,1fr) 300px; }
+.hero-side { align-self: end; text-align: center; }
+.hero-side img.hero-cutout { width: 300px; height: auto; border: 0; border-radius: 0; object-fit: contain; filter: drop-shadow(0 20px 40px rgba(0,0,0,.35)); margin-bottom: -1px; }
+.hero-side p { text-align: left; }
+@media (max-width: 760px) {
+  .hero { grid-template-columns: minmax(0,1fr) 110px; }
+  .hero-side img.hero-cutout { width: 110px; }
+}
+@media print { .hero-side img.hero-cutout { width: 110px; filter: none; } }
+
+/* 활동 카드: 여러 장이 담긴 사진은 자르지 않고 그대로 */
+.activity-grid img { aspect-ratio: 4 / 3; object-fit: contain; background: var(--paper); padding: 8px; }
