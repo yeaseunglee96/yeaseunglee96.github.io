@@ -104,7 +104,7 @@
       <a href="#case-delonghi"><span class="shortcut-number">03</span><strong>드롱기 코리아</strong><span>판촉 → 체험 중심 전환</span><span aria-hidden="true">↓</span></a>
       <a href="#case-gabolle"><span class="shortcut-number">04</span><strong>가볼래</strong><span>출시·운영 · 운영 지표</span><span aria-hidden="true">↓</span></a>
       <a href="#case-veranda"><span class="shortcut-number">05</span><strong>베란다</strong><span>수요 기반 상품 재편</span><span aria-hidden="true">↓</span></a>
-      <a href="#case-bbiyong"><span class="shortcut-number">06</span><strong>삐용</strong><span>AI 판정 → 관리자 판단 순서</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-bbiyong"><span class="shortcut-number">06</span><strong>삐용</strong><span>실시간 관제 · 원격 조작</span><span aria-hidden="true">↓</span></a>
     </nav>
 
     <!-- 01 -->
@@ -340,26 +340,29 @@
     <article class="project" id="case-bbiyong">
       <div class="project-heading">
         <div><p class="project-kind">06 / 삼성청년SW·AI아카데미 15기 · AI 공장 안전</p><h3>삐용<small>BBIYONG</small></h3></div>
-        <div class="project-meta"><p>2026.08 — 10 · 서비스 기획 · 관제 대시보드 · 발표</p><span class="award">삼성청년SW·AI아카데미 공통 프로젝트 우수상</span></div>
+        <div class="project-meta"><p>2026.07 — 08 · 기획 · 관제 프론트엔드 · 발표</p><span class="award">삼성청년SW·AI아카데미 공통 프로젝트 우수상</span></div>
       </div>
       <div class="project-cols">
         <div>
-          <p class="service-intro">AI 비전으로 불꽃을 찾고 열화상 카메라로 온도를 확인해 화재를 이중 판정하는 공장 순찰 로봇입니다. 저는 AI의 판정 결과를 안전관리자가 실제로 판단하는 순서대로 보여주는 관제 화면을 맡았습니다.</p>
+          <p class="service-intro">AI 비전으로 불꽃을 찾고 열화상 카메라로 온도를 확인해 화재를 이중 판정하는 공장 순찰 로봇입니다. 저는 기획서·기능명세와 발표를 맡았고, 관제 웹의 프론트엔드를 거의 전부 만들었습니다. 실서버와 실시간으로 연결해 로봇을 원격 조작하고, 지도와 경보를 한 화면에서 확인할 수 있게 했습니다.</p>
           <dl class="project-facts">
-            <div><dt>담당</dt><dd>서비스 기획 · 관제 대시보드 프론트엔드 · 최종 발표</dd></div>
-            <div><dt>사용 도구</dt><dd>React · TypeScript · Vite · Three.js · STOMP(WebSocket) · HLS.js · Canvas</dd></div>
+            <div><dt>담당</dt><dd>기획(기획서·기능명세·시뮬레이션) · 관제 프론트엔드 · 최종 발표</dd></div>
+            <div><dt>사용 도구</dt><dd>React · TypeScript · Vite · Three.js · STOMP(WebSocket) · JWT · HLS.js · Canvas</dd></div>
           </dl>
           <ul class="contribution-list">
-            <li><strong>판단 순서대로 화면 배치하기</strong><span>현재 상황 → AI 판단 근거 → 화재 지점·로봇 위치 순으로 정보를 다시 구성했습니다.</span></li>
-            <li><strong>데이터 연결 조율하기</strong><span>기술 담당자와 표시할 값과 순서를 맞추고, 서버를 거쳐 화면에 오는 과정의 누락값을 점검했습니다.</span></li>
-            <li><strong>현장 사용자에게 검증받기</strong><span>실제 안전관리자 피드백으로 어려운 용어와 정보 배치를 고쳤습니다.</span></li>
+            <li><strong>실서버와 실시간 연결하기</strong><span>STOMP로 로봇·경보 데이터를 실시간으로 받고 JWT 인증을 붙였습니다. 토큰 자동 갱신과 401 재시도, 여러 탭 사이 토큰 동기화를 넣고, 관제 API 6종을 연동했습니다.</span></li>
+            <li><strong>로봇 원격 조작</strong><span>WASD 수동 주행과 순찰/수동 전환, 서버 속도 상한에 맞춘 속도 게이지를 만들었습니다. 지도를 눌러 순찰 지점을 만들고 로봇에 내려보낼 수 있게 했습니다.</span></li>
+            <li><strong>지도를 한눈에 보이게</strong><span>실시간 SLAM 지도와 2D 도면을 벽 높이로 세운 3D 뷰를 만들고, 매핑 중에는 카메라가 로봇을 따라가게 했습니다.</span></li>
+            <li><strong>경보를 놓치지 않게</strong><span>화재 경보가 오면 화면이 붉게 깜빡이고 확인 처리를 받도록 했습니다. 이벤트 로그와 과열 순위·주간 추이 통계를 만들었습니다.</span></li>
+            <li><strong>타입으로 오류 막기</strong><span>서버·로봇과 주고받는 데이터 형식을 먼저 타입으로 정의한 뒤, 47개 파일을 TypeScript로 옮기고 strict 모드를 켰습니다.</span></li>
           </ul>
         </div>
         <div class="followup compact">
           <div class="followup-heading"><h4>결과</h4></div>
           <dl class="result-grid">
             <div><dt>수상</dt><dd><strong>우수상</strong><small>삼성청년SW·AI아카데미 공통 프로젝트</small></dd></div>
-            <div><dt>현업 평가</dt><dd><small>"화재 상황을 빠르게 파악하고, 정확한 지점을 알려 줘 신속한 대응에 도움이 된다"</small></dd></div>
+            <div><dt>TypeScript 타입 오류</dt><dd><strong>730 → 0</strong><small>암시적 any 409 · null 검사 321 → 모두 0건</small></dd></div>
+            <div><dt>작업량 (약 3주)</dt><dd><strong>커밋 130건</strong><small>Jira 티켓 약 90건</small></dd></div>
           </dl>
         </div>
       </div>
@@ -369,7 +372,7 @@
           <video src="media/bbiyong-service-full.mp4" controls preload="metadata" playsinline></video>
           <div class="service-recording-copy">
             <p>로봇 순찰부터 화재 감지, 관제 화면의 경보 확인까지 서비스 흐름 전체를 담았습니다.</p>
-            <p>이 중 관제 화면의 기획과 구현을 맡았습니다. 로봇 주행, AI 화재 판정, 지도 매핑은 팀원들이 개발했습니다.</p>
+            <p>이 중 관제 웹 화면을 맡았습니다. 로봇 주행, AI 화재 판정, 지도 생성(SLAM)은 팀원들이 개발했습니다.</p>
             <a href="media/bbiyong-service-full.mp4">영상 새 창에서 보기 ↗</a>
           </div>
         </div>
@@ -380,10 +383,21 @@
           <figure><video src="media/bbiyong-alert.mp4" controls preload="metadata" playsinline muted></video><figcaption><strong>화재 경보</strong>AI 판정 결과가 관제 화면의 경보로 이어지는 장면</figcaption></figure>
           <figure><video src="media/bbiyong-driving.mp4" controls preload="metadata" playsinline muted></video><figcaption><strong>자율주행 순찰</strong>로봇이 공장 안을 순찰하는 장면</figcaption></figure>
           <figure id="bbiyong-mapping"><video src="media/bbiyong-mapping-live.mp4" controls preload="metadata" playsinline muted></video><figcaption><strong>실시간 매핑</strong>로봇 위치와 지도가 관제 화면에 실시간으로 표시되는 장면</figcaption></figure>
-          <p class="media-note">영상은 팀 결과물입니다. 저는 서비스 기획과 관제 대시보드를 맡았습니다.</p>
+          <p class="media-note">영상은 팀 결과물입니다.</p>
         </div>
       </details>
-      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>중앙 시스템의 AI가 좋은 답을 내도 현장에서 믿고 움직일 수 있어야 가치가 생깁니다. <strong>AI 분석 결과를 협력사와 라이더가 이해하고 행동할 수 있는 형태</strong>로 바꿔 전달하겠습니다.</p></div>
+      <section class="deep-case" aria-label="삐용 대표 사례">
+        <p class="deep-case-label">대표 사례 · 증상에서 원인까지</p>
+        <h4>키를 누르고 있는데 로봇이 0.4초 만에 멈췄다</h4>
+        <ol>
+          <li><span>증상</span><p>WASD 키를 계속 누르고 있어도 로봇이 잠깐 움직이다 0.4초 뒤에 멈췄습니다.</p></li>
+          <li><span>첫 판단</span><p>화면 쪽 키 입력이나 연결이 끊기는 문제로 보였습니다.</p></li>
+          <li><span>진짜 원인</span><p>화면은 키를 누르는 순간에만 명령을 한 번 보냈습니다. 로봇의 안전장치는 0.4초 안에 새 명령이 없으면 로봇을 세우도록 되어 있었습니다.</p></li>
+          <li><span>해결</span><p>로봇의 안전장치는 그대로 두고, 키를 누르는 동안 명령을 1초에 10번(10Hz) 다시 보내도록 바꿨습니다. 창 포커스나 연결이 끊기면 전송이 멈춰 로봇은 안전하게 섭니다.</p></li>
+          <li><span>비슷한 사례</span><p>3D와 2D 지도에서 로봇 위치가 다르게 찍혔습니다. 같은 좌표를 두 화면이 서로 다른 기준으로 바꾸고 있던 것이 원인이었습니다. 변환 기준을 하나로 맞추고, 위치가 아직 잡히지 않은 로봇은 마커를 숨겼습니다.</p></li>
+        </ol>
+      </section>
+      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>로봇의 안전장치를 끄지 않고 그 규칙 안에서 동작하는 방법을 찾았습니다. <strong>현장의 규칙과 제약을 먼저 이해하고, 그 안에서 실행할 수 있는 개선안</strong>을 만들겠습니다.</p></div>
     </article>
   </div>
 </section>
