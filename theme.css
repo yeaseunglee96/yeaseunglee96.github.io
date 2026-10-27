@@ -122,3 +122,40 @@ body { font-family: "Pretendard Variable", Pretendard, "Malgun Gothic", system-u
   .verification-label { color: var(--mint-900); }
   .award { background: var(--mint-50); color: var(--mint-900); }
 }
+
+/* 가독성: 본문 크기·행간·대비를 키우고 글 폭을 제한 */
+body { font-size: 17px; line-height: 1.8; }
+.hero-intro { font-size: 18px; line-height: 1.85; max-width: 640px; }
+.service-intro { font-size: 18px; line-height: 1.85; color: var(--ink); max-width: 640px; }
+.project-facts dt { font-size: 13px; }
+.project-facts dd { font-size: 15px; color: var(--ink); }
+.contribution-list li { margin-top: 16px; }
+.contribution-list strong { font-size: 16px; color: var(--ink); }
+.contribution-list span { font-size: 15.5px; line-height: 1.8; color: var(--ink-700); }
+.project { padding: 40px 0 88px; }
+.project-heading { margin-bottom: 32px; }
+.project-cols { gap: 48px; }
+.result-grid dt { font-size: 13.5px; color: var(--ink-700); }
+.result-grid dd strong { font-size: 28px; }
+.result-grid dd small { font-size: 13px; color: var(--ink-700); }
+.deep-case { margin: 36px 0 24px; }
+.deep-case h4 { font-size: 21px; line-height: 1.5; }
+.deep-case li { grid-template-columns: 110px minmax(0,1fr); padding: 16px 0; }
+.deep-case li > span { font-size: 14px; }
+.deep-case li p { font-size: 15.5px; line-height: 1.85; color: var(--ink-700); max-width: 760px; }
+.verification { padding: 22px 26px; margin-top: 28px; }
+.verification-label { font-size: 13px; }
+.verification > p:last-child { font-size: 15.5px; line-height: 1.85; }
+.collaboration-grid p, .activity-grid p { font-size: 15.5px; line-height: 1.85; color: var(--ink-700); }
+.collaboration-intro, .collaboration-learning { font-size: 16.5px; color: var(--ink-700); }
+.activity-grid h3 { font-size: 19px; }
+.resume-line strong, .simple-line { font-size: 15px; }
+.resume-line p { font-size: 14px; color: var(--ink-700); }
+.section-head > p { font-size: 15px; color: var(--ink-700); max-width: 320px; }
+.phone-row figcaption, .photo-grid figcaption { font-size: 13.5px; }
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  .hero-intro, .service-intro { font-size: 16.5px; }
+  .deep-case li { grid-template-columns: 1fr; gap: 4px; }
+  .result-grid dd strong { font-size: 24px; }
+}
