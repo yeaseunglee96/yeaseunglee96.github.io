@@ -289,7 +289,7 @@
           <div><dt>Android 월간 활성 기기</dt><dd><strong>36</strong></dd><p>직전 기간 대비 +177%</p></div>
           <div><dt>App Store 전환 (iOS)</dt><dd><strong>106 → 49</strong></dd><p>소개 페이지 조회 → 설치</p></div>
         </dl>
-        <p class="measurement-note">운영 중에는 장소 데이터에서 체인·깨진 항목 83곳을 숨기고 중복 18곳을 병합했습니다. 서버 상태 감시는 4번 연속 실패할 때만 알림이 가도록 해 오탐을 줄였습니다. 웹·앱 전 화면을 약 110항목 × 5개 언어로 점검했습니다.</p>
+        <p class="measurement-note">운영 중에는 장소 데이터에서 체인·깨진 항목 83곳을 숨기고 중복 18곳을 병합했습니다. 서버 상태 감시는 4번 연속 실패할 때만 알림이 가도록 해 오탐을 줄였습니다. 출시 후에는 안드로이드 앱 전수 점검을 진행했습니다(아래).</p>
       </div>
       <section class="service-recording" id="gabolle-demo" aria-label="가볼래 시연">
         <div class="service-recording-heading"><h4>여행 만들기 시연</h4><span>2026.10.07 전시회 시연 영상 · 40초</span></div>
@@ -301,6 +301,17 @@
             <a href="media/gabolle-demo-40s.mp4">영상 새 창에서 보기 ↗</a>
           </div>
         </div>
+      </section>
+      <section class="deep-case" aria-label="가볼래 출시 후 전수 점검">
+        <p class="deep-case-label">출시 후 품질 점검 · 2026.10.22</p>
+        <h4>"출시했으니 됐다"가 아니라, 사용자 화면을 끝까지 다시 눌러 봤다</h4>
+        <ol>
+          <li><span>범위</span><p>출시판 1.0.5와 최신판 두 판에서 화면·기능 약 110항목을 점검했습니다. 한국어는 전 화면, 5개 언어는 주요 11~14화면을 확인했고, 화면에 한글이 남았는지 195장면을 기계로 점검했습니다. 스크린샷 840여 장으로 근거를 남겼습니다.</p></li>
+          <li><span>방법</span><p>Claude 에이전트에게 점검을 맡기고, 저는 점검 범위와 판을 정하고 결과를 검토해 문제마다 분류·재현 판·근거 화면을 붙였습니다. 에뮬레이터로 확인할 수 없는 항목(iOS, 실기기, 접근성 등)은 '확인 못 함'으로 따로 적었습니다.</p></li>
+          <li><span>결과</span><p>크래시 로그는 0건이었고, 문제 23건을 찾았습니다. 튕김 1 · 막힘 2 · 기능 오류 4 · 화면 6 · 번역 4 · 의도 확인 2 · 사소 4.</p></li>
+          <li><span>대표 원인</span><p>방문 인증에서 위치를 못 얻으면 "위치를 확인하고 있어요…"가 끝나지 않았습니다. 다른 화면은 위치 요청에 8초 제한이 있는데 이 화면만 빠져 있었습니다. 로그인 멈춤 때와 같은 유형, 즉 한 요청에 제한 시간이 없어 화면 전체가 멈추는 문제였습니다.</p></li>
+          <li><span>남은 과제</span><p>에뮬레이터에서만 보인 문제(사진 확대 시 멈춤, 회색 지도)는 실기기에서 다시 확인해야 한다고 표시해 두었습니다.</p></li>
+        </ol>
       </section>
       <details class="project-detail media-detail">
         <summary>웹 화면 · 다국어 화면<span class="summary-hint">펼쳐 보기</span></summary>
