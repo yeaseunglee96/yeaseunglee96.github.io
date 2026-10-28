@@ -235,16 +235,13 @@
           <p class="service-intro"><strong>부산을 찾은 외국인에게 현지 장소를 추천하는 앱입니다. Google Play·App Store에 출시해 약 95건 설치됐습니다.</strong> 5개 언어로 지도 탐색, AI 일정, 메뉴판 번역, 긴급 도움을 제공합니다. 교육 과정의 프로젝트가 끝난 뒤에도 10월 말까지 스토어 심사 대응과 운영을 이어 갔습니다.</p>
           <dl class="project-facts">
             <div><dt>담당</dt><dd>PM, 출시·운영(운영 지표·데이터 정리·운영 감시·심사 대응), QA, 인프라·배포</dd></div>
-            <div><dt>사용 도구</dt><dd>SQL(PostgreSQL) · Claude · Docker · Jenkins · GitHub Actions · AWS Lightsail · Jira · App Store Connect · Google Play Console</dd></div>
+            <div><dt>사용 도구</dt><dd>SQL(PostgreSQL) · Claude · Docker · GitHub Actions · AWS Lightsail · Jira</dd></div>
           </dl>
           <ul class="contribution-list">
-            <li><strong>운영 지표를 직접 만들기</strong><span>활동 기록 표를 만들고 SQL로 MAU·WAU·DAU·가입·재방문을 집계하는 운영 지표 API를 만들었습니다. 코스마다 "좋아요/아쉬워요"와 이유를 모아 운영자가 볼 수 있게 집계했습니다.</span></li>
-            <li><strong>잘못된 알림 줄이기</strong><span>서버 상태 확인이 4번 연속 실패할 때만 알림이 가도록 바꿔 오탐을 줄였습니다.</span></li>
-            <li><strong>데이터 정리와 적재</strong><span>장소 데이터에서 체인·깨진 항목 83곳을 숨기고 중복 18곳을 병합했습니다. 장소 2,180곳의 한 줄 소개를 6개 언어로 SQL 적재하고 사실과 다른 문장을 고쳤으며, 공공데이터로 맛집·카페·편의시설을 적재했습니다.</span></li>
-            <li><strong>AI로 점검하고, 원자료로 확인하기</strong><span>Claude 에이전트에게 앱 화면·기능 약 110항목 점검을 맡기고, 결과마다 근거 화면을 대조해 문제 23건을 분류했습니다. 에뮬레이터에서만 보인 문제는 실기기 재확인 대상으로 따로 표시했습니다.</span></li>
-            <li><strong>출시·심사 대응</strong><span>스토어 제출과 심사 반려 대응을 맡아 1.0.1부터 1.0.6까지 버전을 올렸습니다.</span></li>
-            <li><strong>같은 기준으로 개발하기</strong><span>기획서와 데모 앱으로 방향을 먼저 맞추고, 초기 배포까지 Jira 업무 650건에 담당자와 완료 조건을 적었습니다. 기획부터 초기 배포까지 걸리는 기간을 28일에서 18일로 줄였습니다.</span></li>
-            <li><strong>배포 인프라 구축</strong><span>Jenkins 자동 배포와 Nginx 웹 서버를 구성하고, 서버를 AWS Lightsail(gabolle.kr)로 옮긴 뒤 GitHub Actions로 검사·배포 흐름을 다시 만들었습니다. 배포가 겹치지 않게 막고, 실패하면 직전 버전으로 자동 되돌리도록 했습니다.</span></li>
+            <li><strong>운영 지표를 직접 만들기</strong><span>SQL로 MAU·재방문 등 운영 지표 API를 만들고, 코스별 사용자 피드백을 운영자가 볼 수 있게 집계했습니다.</span></li>
+            <li><strong>AI로 점검하고, 원자료로 확인하기</strong><span>Claude 에이전트에게 앱 약 110개 항목 점검을 맡기고, 결과를 근거 화면과 대조해 문제 23건을 분류했습니다.</span></li>
+            <li><strong>데이터 정리</strong><span>장소 데이터의 깨진 항목 83곳을 숨기고 중복 18곳을 병합했으며, 장소 2,180곳 소개를 6개 언어로 적재했습니다.</span></li>
+            <li><strong>같은 기준으로 개발하고 배포하기</strong><span>Jira 업무 650건에 담당자와 완료 조건을 적어 기획~초기 배포를 28일에서 18일로 줄였고, 자동 배포와 실패 시 자동 되돌리기를 구성했습니다.</span></li>
           </ul>
           <div class="project-links"><a class="button button-small" href="https://gabolle.kr" target="_blank" rel="noopener">gabolle.kr 열어 보기 ↗</a></div>
         </div>
