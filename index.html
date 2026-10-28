@@ -15,7 +15,7 @@
 .followup.compact .result-grid{grid-template-columns:1fr;gap:14px}
 .followup.compact .result-grid>div{padding:0 0 12px;border-left:0;border-bottom:1px solid #c8d5c5}
 .followup.compact .result-grid>div:last-child{border-bottom:0;padding-bottom:0}
-.project-shortcuts{grid-template-columns:repeat(3,minmax(0,1fr))}
+.project-shortcuts{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media (max-width:760px){.project-cols{grid-template-columns:1fr;gap:23px}.project-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media print{.project-cols{grid-template-columns:1.12fr 1fr;gap:24px}.project{break-before:page}.project:first-of-type{break-before:auto}.followup.compact .result-grid dd strong{font-size:15pt}}
 .phone-row{margin:26px 0 0;padding:18px;background:var(--paper);border-radius:var(--radius);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
@@ -93,7 +93,7 @@
     <div class="section-head">
       <div>
         <p class="section-number">01 / SELECTED CASES</p>
-        <h2>첫 판단을 의심하고,<br>현장에서 확인한 6개의 사례</h2>
+        <h2>첫 판단을 의심하고,<br>현장에서 확인한 7개의 사례</h2>
       </div>
       <p>각 사례마다 처음 내린 판단, 현장에서 확인한 진짜 원인, 그 뒤의 결과를 차례로 담았습니다.</p>
     </div>
@@ -103,8 +103,9 @@
       <a href="#case-hyundai"><span class="shortcut-number">02</span><strong>현대종합금속</strong><span>데이터 우선순위 · 공급 확약</span><span aria-hidden="true">↓</span></a>
       <a href="#case-delonghi"><span class="shortcut-number">03</span><strong>드롱기코리아</strong><span>판촉 → 체험 중심 전환</span><span aria-hidden="true">↓</span></a>
       <a href="#case-gabolle"><span class="shortcut-number">04</span><strong>가볼래</strong><span>출시 · 운영 지표</span><span aria-hidden="true">↓</span></a>
-      <a href="#case-veranda"><span class="shortcut-number">05</span><strong>베란다</strong><span>수요 기반 상품 재편</span><span aria-hidden="true">↓</span></a>
-      <a href="#case-bbiyong"><span class="shortcut-number">06</span><strong>삐용</strong><span>실시간 관제 · 원격 조작</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-videoai"><span class="shortcut-number">05</span><strong>요리 영상 AI 분석</strong><span>AI 절감안 실측 · 판단 수정</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-veranda"><span class="shortcut-number">06</span><strong>베란다</strong><span>수요 기반 상품 재편</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-bbiyong"><span class="shortcut-number">07</span><strong>삐용</strong><span>실시간 관제 · 원격 조작</span><span aria-hidden="true">↓</span></a>
     </nav>
 
     <!-- 01 -->
@@ -228,7 +229,7 @@
     <article class="project" id="case-gabolle">
       <div class="project-heading">
         <div><p class="project-kind">04 / 삼성청년SW·AI아카데미 15기 · 외국인 여행 앱</p><h3>가볼래<small>GABOLLE</small></h3></div>
-        <div class="project-meta"><p>2026.07 — 10 · PM · 출시·운영 · QA · 인프라</p><span class="award">삼성청년SW·AI아카데미 특화 프로젝트 우수상</span></div>
+        <div class="project-meta"><p>2026.08 — 10 · PM · 출시·운영 · QA · 인프라</p><span class="award">삼성청년SW·AI아카데미 특화 프로젝트 우수상</span></div>
       </div>
       <div class="project-cols">
         <div>
@@ -302,10 +303,54 @@
       <div class="verification"><p class="verification-label">현장에 적용하면</p><p>날씨·수요 같은 외부 변수가 있는 현장에서 여러 대책을 한꺼번에 바꾸면 무엇이 효과였는지 알 수 없습니다. <strong>변수를 하나씩 바꾸며 실행 전후 효과를 측정</strong>하겠습니다.</p></div>
     </article>
 
+        <!-- AI -->
+    <article class="project" id="case-videoai">
+      <div class="project-heading">
+        <div><p class="project-kind">05 / 삼성청년SW·AI아카데미 15기 · 기업 연계 AI 연구</p><h3>요리 영상 AI 분석<small>VIDEO STAGE AI</small></h3></div>
+        <div class="project-meta"><p>2026.10 — 진행 중 · 프레임 선별 실험 · 요리 기록 앱</p><span class="award">AI 비용 절감안 실측 검증</span></div>
+      </div>
+      <div class="project-cols">
+        <div>
+          <p class="service-intro">요리 영상을 AI(Gemini)가 투입·볶기·끓이기 같은 단계로 자동으로 나누는 연구입니다. 저는 AI가 읽을 사진을 고르는 단계의 실험을 맡아, 비용을 줄이는 방법을 설계하고 실제 AI로 검증했습니다. 데이터를 모으기 위한 요리 기록 앱도 기획·개발했습니다.</p>
+          <dl class="project-facts">
+            <div><dt>담당</dt><dd>프레임 선별 실험 · 실험 보고서 양식·검사 도구 · 요리 기록 앱 기획·개발</dd></div>
+            <div><dt>사용 도구</dt><dd>Gemini · Claude · Python · React Native</dd></div>
+          </dl>
+          <ul class="contribution-list">
+            <li><strong>시뮬레이션으로 후보 찾기</strong><span>AI 판독이 완벽하다고 가정한 시뮬레이션으로, 사진을 22% 덜 읽어도 정답 경계를 거의 그대로 찾는 조합을 찾았습니다.</span></li>
+            <li><strong>실제 AI로 다시 확인하기</strong><span>실제 Gemini로 영상 16편을 판독(호출 310회)해 사람이 검수한 정답 286개와 비교했습니다. 토큰 예산 상한을 정해 두고 실행했습니다.</span></li>
+            <li><strong>결과로 판단 바꾸기</strong><span>비용은 22% 줄었지만 짧은 단계를 놓치는 비율이 늘어, 제 제안을 철회하고 기존 방식을 유지하자고 제안했습니다.</span></li>
+            <li><strong>검증 기준을 양식으로</strong><span>실험 보고서에 기준선·상한·비교 기준 칸을 넣은 공통 양식과 검사 도구를 만들었습니다.</span></li>
+          </ul>
+        </div>
+        <div class="followup compact">
+          <div class="followup-heading"><h4>결과</h4></div>
+          <dl class="result-grid">
+            <div><dt>AI 판독 토큰</dt><dd><strong>22%↓</strong><small>1,819,062 → 1,420,685</small></dd></div>
+            <div><dt>정확도 (F1, ±5초)</dt><dd><strong>0.709 → 0.683</strong><small>차이 −0.026, 신뢰구간 −0.047 ~ −0.005</small></dd></div>
+            <div><dt>짧은 단계 재현율</dt><dd><strong>0.839 → 0.724</strong><small>4초 미만 구간 · 그래서 제안 철회</small></dd></div>
+          </dl>
+        </div>
+      </div>
+      <section class="deep-case" aria-label="요리 영상 AI 대표 사례">
+        <p class="deep-case-label">대표 사례 · 첫 판단에서 원인까지</p>
+        <h4>"사진을 22% 덜 읽어도 된다"는 제 결론이 틀렸다</h4>
+        <ol>
+          <li><span>첫 판단</span><p>시뮬레이션에서 AI가 읽는 사진을 분당 31.5장에서 24.5장으로 22% 줄여도, 정답 경계를 92.3%에서 91.4%로 거의 그대로 찾았습니다.</p></li>
+          <li><span>다시 의심한 것</span><p>시뮬레이션은 AI가 사진을 완벽하게 읽는다고 가정합니다. 실제 AI는 틀리기 때문에 이 결론을 그대로 권고할 수 없다고 봤습니다.</p></li>
+          <li><span>실제 확인</span><p>실제 Gemini로 영상 16편을 판독해 사람이 검수한 정답 286개와 비교했습니다. 기존 방식과 같은 조건으로 맞추고, 차이가 우연인지 신뢰구간으로 확인했습니다.</p></li>
+          <li><span>결과</span><p>비용은 22% 줄었지만 정확도(F1)가 0.709에서 0.683으로 떨어지고, 4초 미만의 짧은 단계를 놓치는 일이 늘었습니다.</p></li>
+          <li><span>결정</span><p>제 제안을 철회하고, "시뮬레이션의 비용 절감안은 실제 판독으로 확인하기 전에는 권고하지 않는다"는 원칙을 문서로 남겼습니다.</p></li>
+          <li><span>비슷한 사례</span><p>시뮬레이션에서 좋았던 확인 판독 규칙도 실제 AI로 영상 2편을 먼저 시험해 재현율이 77.3%에서 68.2%로 떨어지는 것을 확인하고, 기존 제안을 보류로 바꿨습니다.</p></li>
+        </ol>
+      </section>
+      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>AI 분석 초안이 좋아 보여도 현장 원자료와 대조하기 전에는 결정하지 않겠습니다. <strong>비용 절감 같은 눈에 띄는 숫자 뒤에 놓치는 주문이나 지연은 없는지</strong> 함께 측정하겠습니다.</p></div>
+    </article>
+
     <!-- 05 -->
     <article class="project" id="case-veranda">
       <div class="project-heading">
-        <div><p class="project-kind">05 / 플랫폼 운영 · 수요와 공급</p><h3>베란다<small>VERANDA · TRAVEL PLATFORM</small></h3></div>
+        <div><p class="project-kind">06 / 플랫폼 운영 · 수요와 공급</p><h3>베란다<small>VERANDA · TRAVEL PLATFORM</small></h3></div>
         <div class="project-meta"><p>2018.12 — 2019.02 · 여행사업팀 현장실습</p><span class="award">취소율 50% → 0%</span></div>
       </div>
       <div class="project-cols">
@@ -336,7 +381,7 @@
     <!-- 06 -->
     <article class="project" id="case-bbiyong">
       <div class="project-heading">
-        <div><p class="project-kind">06 / 삼성청년SW·AI아카데미 15기 · AI 공장 안전</p><h3>삐용<small>BBIYONG</small></h3></div>
+        <div><p class="project-kind">07 / 삼성청년SW·AI아카데미 15기 · AI 공장 안전</p><h3>삐용<small>BBIYONG</small></h3></div>
         <div class="project-meta"><p>2026.07 — 08 · 기획 · 관제 프론트엔드 · 발표</p><span class="award">삼성청년SW·AI아카데미 공통 프로젝트 우수상</span></div>
       </div>
       <div class="project-cols">
@@ -390,7 +435,7 @@
           <li><span>첫 판단</span><p>화면 쪽 키 입력이나 연결이 끊기는 문제로 보였습니다.</p></li>
           <li><span>진짜 원인</span><p>화면은 키를 누르는 순간에만 명령을 한 번 보냈습니다. 로봇의 안전장치는 0.4초 안에 새 명령이 없으면 로봇을 세우도록 되어 있었습니다.</p></li>
           <li><span>해결</span><p>로봇의 안전장치는 그대로 두고, 키를 누르는 동안 명령을 1초에 10번(10Hz) 다시 보내도록 바꿨습니다. 창 포커스나 연결이 끊기면 전송이 멈춰 로봇은 안전하게 섭니다.</p></li>
-          <li><span>비슷한 사례</span><p>재연결할 때마다 로그인 토큰이 사라지는 문제가 있었습니다. 원인은 연결을 끊을 때 실행되는 정리 코드가 비동기로 늦게 끝나면서, 새로 받은 토큰까지 지운 것이었습니다. 토큰 관리를 연결 과정과 분리하고, 토큰이 없으면 연결을 시도하지 않도록 바꿨습니다.</p></li>
+          <li><span>비슷한 사례</span><p>화면 검사 도구가 바뀐 사양을 안전 결함으로 잘못 보고한 일이 있었습니다. 사양 원문과 대조해 검사가 낡았다는 것을 확인하고, 기준은 낮추지 않은 채 검사를 바로잡아 실패 18건을 0건으로 만들었습니다.</p></li>
         </ol>
       </section>
       <div class="verification"><p class="verification-label">현장에 적용하면</p><p>로봇의 안전장치를 끄지 않고 그 규칙 안에서 동작하는 방법을 찾았습니다. <strong>현장의 규칙과 제약을 먼저 이해하고, 그 안에서 실행할 수 있는 개선안</strong>을 만들겠습니다.</p></div>
