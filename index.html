@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>이예승 · 포트폴리오</title>
+<title>이예승 · 디지털/IT 컨설팅 포트폴리오</title>
 <meta name="description" content="첫 가설을 의심하고, 요구를 요건으로 정리하고, 실제 데이터로 검증해 운영까지 이어 간 8개의 사례">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="theme.css">
@@ -56,6 +56,20 @@
 @media (max-width:760px){.process-flow{grid-template-columns:1fr}}
 @media print{.process-flow{break-inside:avoid}}
 .project-shortcuts a:nth-child(5){grid-column:auto}
+.fit-section{padding:66px 0;background:var(--white);border-bottom:1px solid var(--line);scroll-margin-top:90px}
+.fit-table{border-top:2px solid var(--ink)}
+.fit-row{display:grid;grid-template-columns:220px minmax(0,1fr) 170px;gap:24px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+.fit-row strong{font-size:15px}
+.fit-row p{margin:0;font-size:14px;line-height:1.8;color:#455758}
+.fit-row a{font-size:13px;font-weight:700;color:var(--accent);text-decoration:none}
+.fit-row a::after{content:" ↓"}
+.fit-head span{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.04em}
+.skill-band{margin-top:30px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.skill-band div{background:var(--paper);border-radius:var(--radius);padding:18px}
+.skill-band h3{font-size:14px;margin:0 0 6px;color:var(--accent)}
+.skill-band p{margin:0;font-size:13.5px;line-height:1.8}
+@media (max-width:760px){.fit-row{grid-template-columns:1fr;gap:4px}.fit-head{display:none}.skill-band{grid-template-columns:1fr}}
+@media print{.fit-section{padding:20px 0}.fit-row{break-inside:avoid;grid-template-columns:150px 1fr 110px}}
 </style>
 </head>
 <body>
@@ -65,6 +79,7 @@
   <div class="wrap header-inner">
     <a class="brand" href="#top">이예승<span>Portfolio</span></a>
     <nav aria-label="주요 메뉴">
+      <a href="#fit">직무 적합</a>
       <a href="#cases">사례</a>
       <a href="#collaboration">협업</a>
       <a href="#activities">활동</a>
@@ -83,7 +98,7 @@
     <p class="hero-name"><strong>이예승</strong> · 디지털/IT 컨설팅 · 요건정의 · IT 진단</p>
     <p class="hero-intro">삼성청년SW·AI아카데미에서 기업의 요구를 요건으로 정리하고, 실험으로 방법을 고르고, 서비스를 구축·진단해 운영까지 이어 왔습니다. 그 전에는 해외영업·미국 물류·마케팅 현장에서 고객사·협력사·유관 부서 사이의 요구를 조율하고 업무 흐름을 개선했습니다. 첫 판단을 의심하고 실제 데이터로 검증하는 방식으로 금융권 디지털/IT 과제를 수행하겠습니다.</p>
     <div class="hero-links">
-      <a class="button button-primary" href="#cases">사례 보기 <span aria-hidden="true">↓</span></a>
+      <a class="button button-primary" href="#fit">직무 적합 근거 보기 <span aria-hidden="true">↓</span></a>
       <a class="button" href="mailto:yeaseung.lee96@gmail.com">이메일 보내기 <span aria-hidden="true">↗</span></a>
       <button class="text-button print-button" type="button" onclick="window.print()">인쇄·PDF 저장</button>
     </div>
@@ -95,12 +110,41 @@
   <dl class="profile-facts">
     <div><dt>경력</dt><dd>해외영업 1년 4개월<br>미국 물류 1년 · 마케팅 4개월</dd></div>
     <div><dt>교육</dt><dd>삼성청년SW·AI아카데미 15기 (2026.12 수료 예정)</dd></div>
-    <div><dt>자격</dt><dd>SQLD · 국제무역사 · 컴활 1급</dd></div>
-    <div><dt>수상</dt><dd><a href="#about">삼성청년SW·AI아카데미 프로젝트 우수상 2회</a></dd></div>
+    <div><dt>자격</dt><dd>SQLD · 컴퓨터활용능력 1급<br>국제무역사 1급 · 무역영어 1급</dd></div>
+    <div><dt>프로젝트</dt><dd>실서버 배포 프로젝트 4개<br><a href="#about">삼성청년SW·AI아카데미 우수상 2회</a></dd></div>
   </dl>
 </section>
 
 </div>
+
+<section class="fit-section" id="fit">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="section-number">00 / JOB FIT · EY한영 금융컨설팅본부 TC-AXIS</p>
+        <h2>공고의 담당업무마다,<br>직접 해 본 근거가 있습니다</h2>
+      </div>
+      <p>공고에 적힌 담당업무와 우대사항 순서대로, 아래 사례에서 실제로 수행한 일과 수치를 연결했습니다. 각 항목을 누르면 해당 사례로 이동합니다.</p>
+    </div>
+    <div class="fit-table" role="table" aria-label="담당업무별 근거">
+      <div class="fit-row fit-head" role="row"><span role="columnheader">공고 항목</span><span role="columnheader">수행 근거</span><span role="columnheader">사례</span></div>
+      <div class="fit-row" role="row"><strong role="cell">금융기업 디지털/IT 컨설팅</strong><p role="cell">기업(로보터블)의 "조리 단계 데이터 확보" 요구를 서비스로 제안하고, 기획서·와이어프레임으로 합의한 뒤 구축·데이터 전달까지 4주간 수행. 시니어 대상 AI 금융 코칭 서비스를 기획부터 배포·운영까지 수행</p><a role="cell" href="#case-cookingtable">쿠킹테이블 · 똑닥</a></div>
+      <div class="fit-row" role="row"><strong role="cell">PI · 요건정의</strong><p role="cell">요구를 앱 작업 109건으로 분해(Epic→Story→Task), 과제 명세 F1301–F1311을 요구·명세·구현·검증 4단으로 추적. FNS에서 3개월 치 메일을 분류해 업무 흐름을 재설계하고 업무 메일 30% 감소</p><a role="cell" href="#case-cookingtable">쿠킹테이블 · 똑닥 · FNS</a></div>
+      <div class="fit-row" role="row"><strong role="cell">IT 진단 · 운영효율화</strong><p role="cell">웹·서버·실기기 전수 점검으로 결함 29건 수정, 출금 중복 지급 경합 차단. 지식 그래프 결함(노드 600개·연결 0개)을 진단해 개념 53개·관계 71개로 재설계. 배치 서버 배포 성공률 65.4% → 93.8%</p><a role="cell" href="#case-ddokdak">쿠킹테이블 · 똑닥 · 가볼래</a></div>
+      <div class="fit-row" role="row"><strong role="cell">최신기술 기반 디지털/IT 전략</strong><p role="cell">생성형 AI(Gemini·Upstage Solar·Claude)를 실제 업무 흐름에 적용. AI 비용 절감안을 시뮬레이션과 실측(정답 286개 대조)으로 두 차례 검증해 품질 손실을 근거로 기각 제안. 모델을 품질·시간·비용으로 벤치마크해 운영 모델 결정</p><a role="cell" href="#case-cookingtable">쿠킹테이블 · 똑닥</a></div>
+      <div class="fit-row" role="row"><strong role="cell">PMO · 일정·이슈·전환 관리</strong><p role="cell">Jira 작업 174건·GitLab MR 198건 관리, 16단계 WBS 일정 운영, 장애마다 증상·원인·조치·재발 방지 기록. 기존 기능을 멈추지 않는 신·구 구조 병행 전환. 해외영업에서 공급사·고객·사내 기술/생산 부서를 조율해 신규사업 2건 수주</p><a role="cell" href="#case-hyundai">쿠킹테이블 · 똑닥 · 현대종합금속</a></div>
+      <div class="fit-row" role="row"><strong role="cell">신규 금융기관 설립 · 규제 대응</strong><p role="cell">개인정보처리방침·약관 작성, 영상별 동의·철회 시 즉시 삭제·30일 보관·내보내기 이력의 데이터 거버넌스 설계. 금융 서비스에 "투자 권유가 아닌 참고용" 고지와 서버 측 채점·보상 통제 적용</p><a role="cell" href="#case-cookingtable">쿠킹테이블 · 똑닥</a></div>
+      <div class="fit-row" role="row"><strong role="cell">우대 · 디지털/IT 기획·개발 경험</strong><p role="cell">실서버에 배포한 프로젝트 4개(쿠킹테이블·똑닥·가볼래·삐용), 삼성청년SW·AI아카데미 프로젝트 우수상 2회, Google Play·App Store 출시(가볼래)</p><a role="cell" href="#case-gabolle">PART 1 전체</a></div>
+      <div class="fit-row" role="row"><strong role="cell">우대 · 금융·IT 이해도</strong><p role="cell">SQLD, DTI 등 실제 금융 규제로 만든 900문항, 금융감독원 상품 공시 API·시세 데이터 연동, 국제무역사 1급·무역영어 1급</p><a role="cell" href="#case-ddokdak">똑닥 · 자격</a></div>
+      <div class="fit-row" role="row"><strong role="cell">우대 · MS Office 자격</strong><p role="cell">컴퓨터활용능력 1급(Excel·Access). 실험 보고서 표준 양식과 결과 보고서 작성</p><a role="cell" href="#about">자격</a></div>
+    </div>
+    <div class="skill-band">
+      <div><h3>컨설팅 역량</h3><p>요건정의 · 프로세스 개선(PI) · IT 진단 · PMO · WBS · 이해관계자 조율 · 벤치마크 · 보고서 작성 · 데이터 거버넌스</p></div>
+      <div><h3>기술 이해</h3><p>SQL(PostgreSQL·MySQL) · Python · Django · Spring Boot · Vue · React · REST API · Docker · CI/CD · AWS · LLM·RAG</p></div>
+      <div><h3>협업 도구</h3><p>Jira · GitLab · GitHub · Excel · PowerPoint · Word · Claude·Gemini 등 AI 도구</p></div>
+    </div>
+  </div>
+</section>
 
 <section class="projects-section" id="cases">
   <div class="wrap">
