@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>이예승 · 포트폴리오</title>
-<meta name="description" content="첫 가설을 의심하고, 데이터와 현장을 대조해 원인을 찾고, 합의해 실행한 6개의 사례">
+<meta name="description" content="첫 가설을 의심하고, 데이터와 현장을 대조해 원인을 찾고, 합의해 실행한 8개의 사례">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="theme.css">
 <style>
@@ -46,7 +46,16 @@
 .case-group-label{margin:0;font-weight:800;color:var(--mint-900);letter-spacing:.02em}
 .case-group-desc{margin:0;color:var(--ink-700);font-size:14px}
 .case-group + .project{margin-top:18px}
-.project-shortcuts a:nth-child(5){grid-column:1}
+.phone-row.seven{grid-template-columns:repeat(7,minmax(0,1fr))}
+@media (max-width:760px){.phone-row.seven{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.process-flow{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:pf}
+.process-flow li{counter-increment:pf;background:var(--paper);border-radius:var(--radius);padding:16px;display:grid;gap:4px;align-content:start;min-width:0}
+.process-flow li::before{content:"STEP " counter(pf);font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--accent)}
+.process-flow b{font-size:15px}
+.process-flow span{font-size:13px;line-height:1.7;color:var(--muted)}
+@media (max-width:760px){.process-flow{grid-template-columns:1fr}}
+@media print{.process-flow{break-inside:avoid}}
+.project-shortcuts a:nth-child(5){grid-column:auto}
 </style>
 </head>
 <body>
@@ -98,176 +107,164 @@
     <div class="section-head">
       <div>
         <p class="section-number">01 / SELECTED CASES</p>
-        <h2>첫 판단을 의심하고,<br>현장에서 확인한 7개의 사례</h2>
+        <h2>첫 판단을 의심하고,<br>현장에서 확인한 8개의 사례</h2>
       </div>
       <p>각 사례마다 처음 내린 판단, 현장에서 확인한 진짜 원인, 그 뒤의 결과를 차례로 담았습니다.</p>
     </div>
 
     <nav class="project-shortcuts" aria-label="사례 바로가기">
-      <a href="#case-fns"><span class="shortcut-number">01</span><strong>FNS inc.</strong><span>창고 정보 흐름 재설계</span><span aria-hidden="true">↓</span></a>
-      <a href="#case-delonghi"><span class="shortcut-number">02</span><strong>드롱기코리아</strong><span>매장 체험 중심 응대 전환</span><span aria-hidden="true">↓</span></a>
-      <a href="#case-hyundai"><span class="shortcut-number">03</span><strong>현대종합금속</strong><span>데이터 우선순위 · 공급 확약</span><span aria-hidden="true">↓</span></a>
-      <a href="#case-veranda"><span class="shortcut-number">04</span><strong>베란다</strong><span>수요 기반 상품 재편</span><span aria-hidden="true">↓</span></a>
-      <a href="#case-gabolle"><span class="shortcut-number">05</span><strong>가볼래</strong><span>출시 · 운영 지표</span><span aria-hidden="true">↓</span></a>
-      <a href="#case-bbiyong"><span class="shortcut-number">06</span><strong>삐용</strong><span>실시간 관제 · 원격 조작</span><span aria-hidden="true">↓</span></a>
-      <a href="#case-videoai"><span class="shortcut-number">07</span><strong>조리로봇 학습데이터</strong><span>AI 절감안 실측 · 원인 분석</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-cookingtable"><span class="shortcut-number">01</span><strong>쿠킹테이블</strong><span>AI IT 컨설팅 · 요건에서 데이터 전달까지</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-ddokdak"><span class="shortcut-number">02</span><strong>똑닥</strong><span>지식 그래프 기반 금융 추천</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-gabolle"><span class="shortcut-number">03</span><strong>가볼래</strong><span>출시 · 운영 지표</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-bbiyong"><span class="shortcut-number">04</span><strong>삐용</strong><span>실시간 관제 · 원격 조작</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-hyundai"><span class="shortcut-number">05</span><strong>현대종합금속</strong><span>데이터 우선순위 · 공급 확약</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-fns"><span class="shortcut-number">06</span><strong>FNS inc.</strong><span>창고 정보 흐름 재설계</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-delonghi"><span class="shortcut-number">07</span><strong>드롱기코리아</strong><span>매장 체험 중심 응대 전환</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-veranda"><span class="shortcut-number">08</span><strong>베란다</strong><span>수요 기반 상품 재편</span><span aria-hidden="true">↓</span></a>
     </nav>
 
-    <div class="case-group"><p class="case-group-label">PART 1 · 현장 × 데이터</p><p class="case-group-desc">현장의 문제를 데이터로 확인하고 움직인 경력 4건</p></div>
+    <div class="case-group"><p class="case-group-label">PART 1 · 데이터와 AI로 만들고 검증한 프로젝트</p><p class="case-group-desc">삼성청년SW·AI아카데미에서 요건 정의부터 구축·운영까지 수행한 프로젝트 4건</p></div>
 
     <!-- 01 -->
-    <article class="project" id="case-fns">
+    <article class="project" id="case-cookingtable">
       <div class="project-heading">
-        <div><p class="project-kind">01 / 물류 · 운송 운영</p><h3>FNS inc.<small>OCEAN IMPORT · LOS ANGELES</small></h3></div>
-        <div class="project-meta"><p>2022.07 — 2023.07 · 수입·물류 코디네이터 인턴</p><span class="award">4개월 단독 담당</span></div>
+        <div><p class="project-kind">01 / 삼성청년SW·AI아카데미 15기 · 기업 연계 · AI IT 컨설팅</p><h3>쿠킹테이블<small>ROBOTABLE × SSAFY</small></h3></div>
+        <div class="project-meta"><p>2026.10.15 — 11.11 · 기획 · 백엔드 · QA · PMO · 팀 7명</p><span class="award">634MB 실영상 전달 확인</span></div>
       </div>
       <div class="project-cols">
         <div>
-          <p class="service-intro">담당 과장님의 출산휴가 동안 LG전자 고객사의 창고 간 재고 이동(Warehouse&nbsp;Transfer)을 4개월간 혼자 맡았습니다. 모든 건이 긴급했고 물량도 불규칙했습니다. 지연의 원인이 물량이 아니라 정보 흐름에 있다는 것을 찾아 업무 방식을 다시 짰습니다.</p>
+          <p class="service-intro"><strong>조리 로봇 기업 로보터블은 실제 가정의 조리 단계 데이터가 필요했습니다.</strong> 저는 요구를 요건으로 정리하고, 실험으로 방법을 고르고, 앱과 서버를 구축해 영상과 라벨이 기업에 전달되는 데까지 4주 동안 수행했습니다. 사용자가 휴대폰으로 요리를 찍으면 AI가 조리 단계를 나누고, 사용자가 고친 결과가 그대로 로봇 학습용 라벨이 됩니다. 학습에 동의한 영상만 기업에 전달되도록 동의·삭제 정책도 함께 설계했습니다.</p>
           <dl class="project-facts">
-            <div><dt>담당</dt><dd>Warehouse Transfer 전 과정 · 데일리 트래킹 · 통관 서류 · 정산</dd></div>
-            <div><dt>협업</dt><dd>LG 고객사 · 8개 창고 · 트럭킹 회사 · 사내 팀</dd></div>
+            <div><dt>담당</dt><dd>요건 정의 · 실험 설계 · 앱·서버 구축과 배포 · 전체 QA · 개인정보·데이터 전달 정책 · Jira·MR 운영</dd></div>
+            <div><dt>협업</dt><dd>로보터블(요구·영상 제공) · 팀원 6명(모델·업로드 서버·리워드 담당)</dd></div>
+            <div><dt>사용 도구</dt><dd>React Native(Expo) · Spring Boot · PostgreSQL · Nginx · Docker · Jira · GitLab · Gemini·Claude API · AI 코딩 에이전트</dd></div>
           </dl>
           <ul class="contribution-list">
-            <li><strong>3개월 치 메일 전부 분류하기</strong><span>주문 1건당 평균 20건의 메일 중 6건 이상이 창고 정보나 화물 상태를 묻는 내용이었습니다.</span></li>
-            <li><strong>창고 8곳 정보 정리하기</strong><span>창고마다 직접 연락해 운영시간·담당자·특이사항을 매뉴얼로 만들었습니다.</span></li>
-            <li><strong>묻기 전에 공유하기</strong><span>트럭킹사에 출하 가능 시간·서류를 미리 보내고, 매일 아침 운송 현황표를 고객사에 먼저 공유했습니다.</span></li>
+            <li><strong>요구를 요건으로</strong><span>"조리 단계 데이터 확보"를 사용자 참여형 앱으로 구체화하고, 기획서 v0.3과 와이어프레임 v1~v3를 앱 작업 109건으로 나눴습니다.</span></li>
+            <li><strong>근거로 방법 선택</strong><span>프레임 선별 전략을 시뮬레이션으로 비교한 뒤 실제 Gemini 판독 16편으로 검증하고, 서빙 모델은 품질·시간·영상당 비용으로 벤치마크해 정했습니다.</span></li>
+            <li><strong>운영까지 책임</strong><span>운영 서버 배포, 로그인(JWT·PKCE), 16MB 조각 업로드, 외부 플랫폼 3곳 게시 연동, 전체 QA와 결함 수정까지 맡았습니다.</span></li>
+            <li><strong>데이터 거버넌스</strong><span>개인정보처리방침·약관을 쓰고, 영상별 동의·철회 시 즉시 삭제·30일 보관·내보내기 이력을 정책으로 정했습니다.</span></li>
           </ul>
         </div>
         <div class="followup compact">
-          <div class="followup-heading"><h4>결과</h4></div>
+          <div class="followup-heading"><h4>결과</h4><span class="muted" style="font-size:12px">2026-11-11 Jira·GitLab 기준</span></div>
           <dl class="result-grid">
-            <div><dt>운송 납기 준수율</dt><dd><strong>95%+</strong><small>단독 담당 4개월 기준</small></dd></div>
-            <div><dt>업무 메일</dt><dd><strong>30%↓</strong><small>사전 공유 전후 주문당 메일 수 비교</small></dd></div>
-            <div><dt>Warehouse Transfer 매출</dt><dd><strong>18%↑</strong><small>고객사 위탁 물량이 늘어 4개월 순수익 1억 1,600만 원</small></dd></div>
+            <div><dt>Jira 담당 작업</dt><dd><strong>174건</strong><small>완료 162 · 408 포인트</small></dd></div>
+            <div><dt>GitLab 병합 MR</dt><dd><strong>198건</strong><small>커밋 262 · 팀 7명 중 3위</small></dd></div>
+            <div><dt>QA로 찾아 고친 결함</dt><dd><strong>29건</strong><small>웹 3 · 앱 10 · 서버 11 · 실기기 4 · 외부 API 1</small></dd></div>
+            <div><dt>실제 전달 확인</dt><dd><strong>634MB</strong><small>1080p 영상 1편 + 라벨 7단계</small></dd></div>
           </dl>
         </div>
       </div>
-      <figure class="photo-grid"><img src="img/fns-office.jpg" alt="FNS inc. LA 사무소" loading="lazy"><img src="img/fns-entrance.jpg" alt="사무소 앞 팀원들" loading="lazy"><img src="img/fns-team.jpg" alt="회사 행사" loading="lazy"><figcaption>FNS inc. LA 사무소와 Ocean Import 팀</figcaption></figure>
-      <section class="deep-case" aria-label="FNS 대표 사례">
-        <p class="deep-case-label">대표 사례 · 첫 판단에서 원인까지</p>
-        <h4>지연은 물량이 아니라 '누가 무엇을 모르는가'에서 생겼다</h4>
+      <ol class="process-flow" aria-label="수행 과정">
+        <li><b>요건 정의</b><span>기업 요구를 앱 기획서와 화면 요건으로 정리, 분석 결과 형식 v1 정의</span></li>
+        <li><b>실험·벤치마크</b><span>프레임 선별 시뮬레이션, 실제 판독 16편 검증, 모델별 품질·시간·비용 비교</span></li>
+        <li><b>구축·배포</b><span>앱, 서버, DB, 로그인, 조각 업로드, 외부 게시 API를 운영 서버에 배포</span></li>
+        <li><b>진단·QA</b><span>웹 18화면·서버 API·실기기 전수 점검, 결함 29건 수정과 보고서</span></li>
+        <li><b>데이터 전달</b><span>동의 영상 업로드, 영상+라벨 내보내기, 30일 보관·철회 삭제 정책</span></li>
+      </ol>
+      <figure class="phone-row seven" aria-label="쿠킹테이블 앱 화면">
+        <img src="img/ct-home.jpg" alt="홈 화면: 요리 점수와 요리 찍기 버튼" loading="lazy">
+        <img src="img/ct-steps.jpg" alt="AI가 나눈 7단계 보기" loading="lazy">
+        <img src="img/ct-log.jpg" alt="기록장: 점수·레벨·주간 랭킹" loading="lazy">
+        <img src="img/ct-explore.jpg" alt="둘러보기: 다른 사람의 요리 영상" loading="lazy">
+        <img src="img/ct-share.jpg" alt="자동 게시 연결" loading="lazy">
+        <img src="img/ct-consent.jpg" alt="영상별 학습 동의" loading="lazy">
+        <img src="img/ct-send.jpg" alt="로보터블에 보내기 전 재확인" loading="lazy">
+        <figcaption>실제 휴대폰 화면 · 홈 · 단계 확인 · 기록장 · 둘러보기 · 자동 게시 · 영상별 동의 · 전달 전 재확인 <span>(앱 화면은 팀 결과물입니다)</span></figcaption>
+      </figure>
+      <section class="deep-case" aria-label="쿠킹테이블 대표 사례 1">
+        <p class="deep-case-label">대표 사례 1 · 기업 미팅 시연 당일</p>
+        <h4>시험에서는 통과한 업로드가, 실제 휴대폰 영상은 한 편도 받지 못했다</h4>
         <ol>
-          <li><span>증상</span><p>긴급 건마다 메일이 오가며 대응이 늦어지고, 트럭이 창고 앞에서 대기하며 추가 비용이 생길 위험이 있었습니다.</p></li>
-          <li><span>원인 추적</span><p>과장님이 주고받은 최근 3개월 치 메일을 유형별로 나눴습니다.<br>창고 정보나 화물 상태를 뒤늦게 묻는 메일이 전체의 30%를 넘었습니다.</p></li>
-          <li><span>검토한 방법</span><p>다른 부서의 업무 절차를 참고해, 자주 묻는 정보를 미리 정리해 둘 수 있는지 확인했습니다.</p></li>
-          <li><span>해결</span><p>창고 정보 매뉴얼과 아침 현황표로 상대가 묻기 전에 알 수 있게 했습니다. 예정 시간에 맞춰 출하해 트럭 대기 비용도 막았습니다.</p></li>
+          <li><span>첫 판단</span><p>업로드 서버와 동의 화면이 배포됐고 자동 시험 251개가 통과했으니, 시연 준비가 끝났다고 봤습니다.</p></li>
+          <li><span>반대 증거</span><p>실제 휴대폰으로 5분짜리 영상을 보내 보니 "400MB 이하만 받아요(이 영상 634MB)"가 떴습니다. 한도를 고친 뒤에도 서버 로그에는 업로드 요청이 한 건도 없었습니다.</p></li>
+          <li><span>진짜 원인</span><p>두 가지였습니다. 서버 한도가 720p 시험 영상 기준(400MB·720p·h264)으로 정해져 있었고, 앱은 비동기 파일 읽기를 기다리지 않고 파일을 먼저 닫아 휴대폰에서는 늘 실패했습니다.</p></li>
+          <li><span>해결</span><p>업로드 한도를 4GB·4K·HEVC로 넓히고(DB 제약 마이그레이션 포함) 읽기 코드를 고쳐 같은 날 배포했습니다. 634MB 영상이 3분 만에 올라가 <code>영상 .mp4</code> + <code>라벨 .csv</code> + <code>해시 목록표</code>로 내보내졌습니다.</p></li>
         </ol>
       </section>
-      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>라스트마일 지연도 정보의 빈틈에서 생깁니다. <strong>협력사·라이더·유관 조직이 묻기 전에 알 수 있는 흐름</strong>을 만들고, 반복 공유 업무는 AI로 자동화하겠습니다.</p></div>
+      <section class="deep-case" aria-label="쿠킹테이블 대표 사례 2">
+        <p class="deep-case-label">대표 사례 2 · 출시 전 전체 QA</p>
+        <h4>금융 서비스였다면 사고였을 "출금 두 번 지급"을 출시 전에 막았다</h4>
+        <ol>
+          <li><span>증상</span><p>포인트 받기 요청이 겹치면 같은 출금이 두 번 처리될 수 있었고, 송금 중 멈춘 건은 계속 "보내는 중"으로 남았습니다.</p></li>
+          <li><span>원인 추적</span><p>출금 처리 작업과 관리자 승인이 같은 건을 동시에 집을 수 있었습니다. 선점이 원자적이지 않았습니다.</p></li>
+          <li><span>해결</span><p>DB 함수로 한 번에 선점(<code>claim_payout</code>)하고, 10분 넘게 멈춘 송금은 다시 확인하도록 바꿔 시험 163개로 확인했습니다. 리워드 기능은 팀원 담당이며 저는 이 결함 수정을 맡았습니다.</p></li>
+        </ol>
+      </section>
+      <section class="deep-case" aria-label="쿠킹테이블 대표 사례 3">
+        <p class="deep-case-label">대표 사례 3 · 실험으로 방법 고르기</p>
+        <h4>좋아 보이는 AI 비용 절감안을 두 번 실측하고, 두 번 멈췄다</h4>
+        <ol>
+          <li><span>첫 판단</span><p>시뮬레이션에서 AI(Gemini)가 읽는 사진을 22% 줄여도 정답 경계를 거의 그대로 찾았습니다. 하지만 AI가 사진을 완벽하게 읽는다는 가정이었습니다.</p></li>
+          <li><span>1차 실측</span><p>토큰 상한을 승인받아 실제 Gemini로 영상 16편을 판독하고, 사람이 검수한 정답 286개와 비교했습니다. 토큰은 22% 줄었지만 F1이 0.709에서 0.683으로 떨어져 제안을 철회했습니다.</p></li>
+          <li><span>원인 분석</span><p>놓친 경계 24개를 분류하니 54%가 사진 간격이 넓어 아예 보지 못한 구간, 38%가 AI 판독 오류였습니다.</p></li>
+          <li><span>2차 실측</span><p>간격은 그대로 두고 후보 주변만 줄인 개선안을 기존 방식과 같은 날 같은 설정으로 실행(호출 617회)했습니다. 토큰은 16% 줄었지만 짧은 단계 재현율이 0.851에서 0.770으로 떨어져 이 안도 기각을 제안했습니다.</p></li>
+          <li><span>결정</span><p>실측 없이 판독 기준을 바꾸지 않는다는 원칙을 보고서로 남겼습니다(팀 결정 전 제안).</p></li>
+        </ol>
+      </section>
+      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>요건은 시험 데이터가 아니라 실제 고객 데이터로 검증해야 합니다. <strong>코어뱅킹 전환 같은 프로젝트에서도 실데이터 리허설이 일정의 위험을 가장 먼저 드러낸다</strong>고 생각합니다. 구현은 제가 설계·지시하고 AI 코딩 에이전트가 작성한 코드를 시험과 실기기로 검증한 뒤 병합하는 방식으로 진행했습니다.</p></div>
     </article>
 
     <!-- 02 -->
-    <article class="project" id="case-delonghi">
+    <article class="project" id="case-ddokdak">
       <div class="project-heading">
-        <div><p class="project-kind">02 / 마케팅 · 고객 데이터</p><h3>드롱기코리아<small>DE'LONGHI KOREA</small></h3></div>
-        <div class="project-meta"><p>2022.03 — 07 · 디지털 마케팅팀 인턴</p><span class="award">매출 12%↑</span></div>
+        <div><p class="project-kind">02 / 삼성청년SW·AI아카데미 15기 · 디지털 금융 서비스</p><h3>똑닥<small>DDOKDAK · AI 금융 코칭</small></h3></div>
+        <div class="project-meta"><p>2026.05.27 — 06.26 · 기획 · 구축</p><span class="award">실서비스 배포·운영</span></div>
       </div>
       <div class="project-cols">
         <div>
-          <p class="service-intro">판촉을 했는데도 신제품 커피머신 매출이 오르지 않았습니다. 홍보가 부족하다는 첫 판단을 내려놓고 고객 데이터와 매장을 대조해, 고객이 사기 전에 제품을 직접 써 볼 기회가 없다는 원인을 찾았습니다.</p>
+          <p class="service-intro"><strong>"내 손 안의 금융 주치의"를 목표로 한 시니어 대상 AI 금융 코칭 플랫폼입니다.</strong> 풀어 본 문제로 사용자의 금융 이해도를 지식 그래프로 진단하고, 그 결과로 상품 추천을 바꿉니다. 요구사항을 쪼개 정의하고, 기존 구조를 진단해 다시 설계하고, 운영 중 생긴 장애의 원인을 찾아 기록했습니다.</p>
           <dl class="project-facts">
-            <div><dt>담당</dt><dd>CRM 데이터 분석 · 매장 현장 조사 · 응대 매뉴얼 개선</dd></div>
-            <div><dt>협업</dt><dd>마케팅팀 · 백화점 매장 매니저</dd></div>
+            <div><dt>규모</dt><dd>백엔드 앱 17개 · 화면 34개 · 고정 퀴즈 900문항</dd></div>
+            <div><dt>사용 도구</dt><dd>Python · Django · DRF · Vue 3 · TypeScript · SQLite·MySQL(RDS) · Upstage Solar · D3-force</dd></div>
           </dl>
           <ul class="contribution-list">
-            <li><strong>연령대별로 나눠 보기</strong><span>신제품 구매자 중 50~60대는 22%뿐이었고, 같은 연령대에서 "다루기 어렵다"는 문의가 10건 있었습니다.</span></li>
-            <li><strong>매장 4곳 직접 비교하기</strong><span>경쟁사 매장에서는 고객이 머신을 직접 조작했지만, 자사 매장은 설명과 시음에서 끝났습니다.</span></li>
-            <li><strong>응대 방식 바꾸기</strong><span>매장 매니저와 체험형 응대 매뉴얼을 만들어 교육하고, 바리스타 커피클래스를 기획했습니다.</span></li>
+            <li><strong>요구사항을 기능 단위로 정의</strong><span>과제 명세 F1301–F1311, NF1301을 항목별로 쪼개 고객 요구·기능 명세·구현·검증 방법을 한 줄씩 남겼습니다.</span></li>
+            <li><strong>진단에서 추천까지 흐름 설계</strong><span>가입 직후 18문항으로 4단계 수준을 진단하고, 900문항 퀴즈 결과로 개념별 숙련도를 갱신해 추천에 반영했습니다. 채점은 서버에서만 하고 같은 문제로 포인트를 반복해 받지 못하게 막았습니다.</span></li>
+            <li><strong>멈추지 않고 옮기는 전환</strong><span>새 지식 그래프를 기존 코드를 고치지 않는 독립 모듈로 붙이고, 개발용 SQLite와 배포용 MySQL을 설정값 하나로 바꾸게 했습니다.</span></li>
+            <li><strong>생성형 AI를 금융 업무에 적용</strong><span>게시글 검열·종목 판별·포트폴리오 진단·상품 추천에 LLM을 붙이고, 챗봇에 내부 데이터 검색(RAG)과 응답 통제(guardrail)를 넣었습니다. AI가 늦어도 리포트 발행이 멈추지 않게 대체 동작을 정했습니다.</span></li>
           </ul>
+          <div class="project-links"><a class="button button-small" href="https://ddokdak.duckdns.org/" target="_blank" rel="noopener">ddokdak.duckdns.org 열어 보기 ↗</a></div>
         </div>
         <div class="followup compact">
           <div class="followup-heading"><h4>결과</h4></div>
           <dl class="result-grid">
-            <div><dt>매출</dt><dd><strong>12%↑</strong></dd></div>
-            <div><dt>커피클래스 만족도</dt><dd><strong>90%+</strong></dd></div>
+            <div><dt>지식 그래프 재설계</dt><dd><strong>600 → 53</strong><small>흩어진 노드를 핵심 개념으로 재분류 · 분류 실패 0건</small></dd></div>
+            <div><dt>개념 간 관계</dt><dd><strong>0 → 71</strong><small>개념별 학습 영상 구간 394개 연결</small></dd></div>
+            <div><dt>인증 장애</dt><dd><strong>전체 복구</strong><small>로그인 후 저장 요청 403 · 토큰 발급 지점 1곳으로 원인 특정</small></dd></div>
           </dl>
         </div>
       </div>
-      <figure class="photo-grid"><img src="img/dl-store.jpg" alt="드롱기 매장" loading="lazy"><img src="img/dl-office.jpg" alt="디지털 마케팅팀 사무실" loading="lazy"><img src="img/dl-shoot.jpg" alt="사용법 영상 촬영" loading="lazy"><figcaption>드롱기 매장 · 디지털 마케팅팀 · 커피클래스 진행 · 사용법 영상 촬영</figcaption></figure>
-      <section class="deep-case" aria-label="드롱기 대표 사례">
+      <figure class="case-photo"><img src="img/dd-graph.jpg" alt="금융신경망: 전체 이해도 52%, 분야별 이해도 레이더 차트, 개념 관계 그래프" loading="lazy"><figcaption>금융신경망 · 분야 9개의 이해도를 레이더 차트로 보여 주고, 개념 53개와 관계 71개를 분야별 색으로 그립니다.</figcaption></figure>
+      <section class="deep-case" aria-label="똑닥 대표 사례">
         <p class="deep-case-label">대표 사례 · 첫 판단에서 원인까지</p>
-        <h4>"덜 알려져서 안 팔린다"가 아니었다</h4>
+        <h4>노드 600개가 흩어진 지식 그래프를 53개 개념 구조로 다시 묶다</h4>
         <ol>
-          <li><span>증상</span><p>6주간 VIP 추천인 프로모션을 진행했지만 신제품 매출에 의미 있는 변화가 없었습니다.</p></li>
-          <li><span>다시 의심한 것</span><p>판촉이 통하지 않았다면 원인을 잘못 짚은 것이라 보고, CRM 데이터를 연령대별로 다시 나눴습니다.</p></li>
-          <li><span>현장 확인</span><p>고가 제품이 백화점에서 주로 팔린다는 점에 주목해 4개 백화점의 경쟁사·자사 매장 응대를 직접 비교했습니다.</p></li>
-          <li><span>진짜 원인</span><p>고객이 사기 전에 머신을 직접 조작해 보지 못해, 쓰기 어렵다고 느끼고 구매를 망설이고 있었습니다.</p></li>
-          <li><span>해결</span><p>판촉을 멈추고 체험 마케팅으로 바꿨습니다. 매장에서 고객이 커피머신을 직접 조작해 커피를 내려 보도록 응대 방식을 바꾸고, 바리스타와 함께하는 커피클래스를 열었습니다.</p></li>
+          <li><span>첫 판단</span><p>퀴즈 약점마다 노드를 만들었으니 그래프가 사용자의 약점을 보여 줄 것이라 생각했습니다.</p></li>
+          <li><span>원인</span><p>약점 문자열이 문항마다 달라 노드 600개가 서로 연결되지 않았습니다. 관계가 없으니 무엇을 먼저 배워야 하는지 읽을 수 없었습니다.</p></li>
+          <li><span>해결</span><p>약점을 53개 핵심 개념으로 다시 분류하고 개념 사이 관계 71개를 정의했습니다. 옛 그래프는 추천·커뮤니티가 참조하고 있어 지우지 않고, 새 구조를 독립 모듈로 붙였습니다.</p></li>
+          <li><span>비슷한 사례</span><p>"버튼을 눌러도 반응이 없다"는 증상은 화면 문제가 아니었습니다. 앱을 열 때 호출되는 API가 보안 토큰(CSRF 쿠키)을 발급하지 않아 로그인 후 모든 저장 요청이 403으로 막혔고, 오류는 콘솔에만 찍혔습니다. 토큰을 발급하게 고치고, 개발 서버 포트가 바뀌면 재발하는 조건까지 운영 문서에 남겼습니다.</p></li>
         </ol>
       </section>
-      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>"주문이 몰려서 지연된다"는 첫 판단을 그대로 믿지 않겠습니다. <strong>지표를 시간대·거리·권역별로 나눠 보고, 현장에서 반대 증거를 찾아</strong> 진단을 검증하겠습니다.</p></div>
+      <details class="project-detail media-detail">
+        <summary>화면 더 보기<span class="summary-hint">펼쳐 보기</span></summary>
+        <div class="detail-body media-grid">
+          <figure><img src="img/dd-home.jpg" alt="똑닥 홈 화면" loading="lazy"><figcaption><strong>홈</strong>퀴즈·주식/ETF·처방전·예적금·금융신경망 등 9개 기능으로 바로 이동</figcaption></figure>
+          <figure><img src="img/dd-rx.jpg" alt="처방전 화면" loading="lazy"><figcaption><strong>처방전</strong>보유자산 근거의 진단 소견과 "투자 권유가 아닌 참고용" 주의사항</figcaption></figure>
+          <figure><img src="img/dd-market.jpg" alt="시황 리스크 리포트" loading="lazy"><figcaption><strong>시황분석</strong>AI 응답이 늦어도 보유자산 구조로 기본 리스크를 발행</figcaption></figure>
+          <figure><img src="img/dd-quiz.jpg" alt="DTI 규제 퀴즈" loading="lazy"><figcaption><strong>퀴즈</strong>DTI 40% 규제처럼 실제 금융 규제로 만든 문항</figcaption></figure>
+          <figure><img src="img/dd-stock.jpg" alt="주식/ETF 화면" loading="lazy"><figcaption><strong>주식/ETF</strong>국내외 지수와 한·미 시가총액 상위 종목 연동</figcaption></figure>
+          <figure><img src="img/dd-stock-detail.jpg" alt="종목 상세" loading="lazy"><figcaption><strong>종목 상세</strong>1개월 캔들차트·내 보유금액·관련 뉴스를 한 화면에</figcaption></figure>
+        </div>
+      </details>
+      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>코어뱅킹 현대화처럼 레거시를 바로 끌 수 없는 전환에서는 <strong>참조 관계를 먼저 확인하고 신·구 시스템을 나란히 운영</strong>해야 합니다. 증상과 원인을 분리하고, 재발 조건을 운영 문서로 남기겠습니다.</p></div>
     </article>
 
     <!-- 03 -->
-    <article class="project" id="case-hyundai">
-      <div class="project-heading">
-        <div><p class="project-kind">03 / 해외영업 · 협력사 조율</p><h3>현대종합금속<small>BWTS · SCR · CRYOGENIC VALVE</small></h3></div>
-        <div class="project-meta"><p>2024.05 — 2025.09 · 영업부 해외영업 사원</p><span class="award">수주 목표 대비 161%</span></div>
-      </div>
-      <div class="project-cols">
-        <div>
-          <p class="service-intro">BWTS·SCR 해외영업과 연간 사업계획, 선주사·조선소 대상 견적·계약·납기·매출·수금을 맡았습니다. 데이터로 영업 우선순위를 세웠고, 전쟁으로 공급 우려가 커졌을 때는 고객이 직접 확인할 수 있는 근거를 만들어 신규사업을 수주했습니다.</p>
-          <dl class="project-facts">
-            <div><dt>담당</dt><dd>BWTS·SCR 해외영업 · 극저온 밸브 신규사업 개발</dd></div>
-            <div><dt>협업</dt><dd>선주사·조선소 · 이스라엘 공급업체 · 사내 기술·생산 부서</dd></div>
-          </dl>
-          <ul class="contribution-list">
-            <li><strong>노후 선박 데이터로 우선순위 세우기</strong><span>선사별 20년 이상 노후 선박 보유 척수를 조사해 BWTS 고객별 영업 우선순위 목록을 만들었습니다.</span></li>
-            <li><strong>대체 공급 가능 여부 확인하기</strong><span>이스라엘 공장이 멈춰도 다른 공장에서 공급할 수 있는지 먼저 확인했습니다.</span></li>
-            <li><strong>공급사와 근거 만들기</strong><span>미국·유럽 공장 대체 공급을 명시한 CEO 명의 Confirmation Letter를 확보하고, 고객 요구를 기술·생산 부서 검토 조건으로 구체화했습니다.</span></li>
-          </ul>
-        </div>
-        <div class="followup compact">
-          <div class="followup-heading"><h4>결과</h4></div>
-          <dl class="result-grid">
-            <div><dt>SCR 부문 2025 수주 (9월 기준)</dt><dd><strong>113억</strong><small>목표 70억 대비 161% · 4개월 만에 연간 목표 달성</small></dd></div>
-            <div><dt>극저온 밸브 신규사업</dt><dd><strong>2건 수주</strong></dd></div>
-            
-          </dl>
-        </div>
-      </div>
-      <figure class="photo-grid"><img src="img/hd-office.jpg" alt="사무실 근무" loading="lazy"><img src="img/hd-yard.jpg" alt="조선소 현장" loading="lazy"><img src="img/hd-ship.jpg" alt="선박 현장 방문" loading="lazy"><figcaption>해외영업 사무실과 조선소 현장</figcaption></figure>
-      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>3PL 협력사와의 협상도 상대의 인력·손익·권한 제약을 먼저 이해하는 데서 시작합니다. <strong>"괜찮다"는 말 대신 상대가 확인할 수 있는 근거</strong>를 만들어 합의를 실행까지 연결하겠습니다.</p></div>
-    </article>
-
-    <!-- 04 -->
-    <article class="project" id="case-veranda">
-      <div class="project-heading">
-        <div><p class="project-kind">04 / 플랫폼 운영 · 수요와 공급</p><h3>베란다<small>VERANDA · TRAVEL PLATFORM</small></h3></div>
-        <div class="project-meta"><p>2018.12 — 2019.02 · 여행사업팀 현장실습</p><span class="award">취소율 50% → 0%</span></div>
-      </div>
-      <div class="project-cols">
-        <div>
-          <p class="service-intro">최근 4개월간 여행상품 평균 취소율이 50%였고, 전월에는 14개 상품 중 7개가 취소돼 290만 원의 영업손실이 났습니다. "상품 수를 줄이면 안 된다"는 기존 운영 방식을 의심했고, 수요보다 많은 상품이 신청 인원을 흩어 놓고 있다는 것을 찾았습니다.</p>
-          <dl class="project-facts">
-            <div><dt>담당</dt><dd>여행 플랫폼 상품 운영 · 실적 분석 · 개선 제안</dd></div>
-            <div><dt>협업</dt><dd>이사님 · IT팀 · 장년층 고객</dd></div>
-          </dl>
-          <ul class="contribution-list">
-            <li><strong>자사와 타사 상품 비교하기</strong><span>자사 4개월 실적과 3개 여행사 상품 20건을 비교해, 계절 특성 상품에 수요가 몰린다는 패턴을 찾았습니다.</span></li>
-            <li><strong>비교 근거로 제안하기</strong><span>인턴이었지만 비교 결과를 근거로 이사님께 인기 상품 중심 운영을 제안해, 6개 상품으로 재편했습니다.</span></li>
-            <li><strong>수요를 보이게 만들기</strong><span>IT팀과 협업해 상품 조회 시 현재 신청 인원을 볼 수 있게 했습니다.</span></li>
-          </ul>
-        </div>
-        <div class="followup compact">
-          <div class="followup-heading"><h4>결과</h4></div>
-          <dl class="result-grid">
-            <div><dt>여행상품 취소율</dt><dd><strong>50% → 0%</strong><small>재편한 6개 상품 모두 정원을 채워 출발</small></dd></div>
-            <div><dt>매출</dt><dd><strong>2배</strong></dd></div>
-            <div><dt>영업이익</dt><dd><strong>흑자 전환</strong></dd></div>
-          </dl>
-        </div>
-      </div>
-      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>배달 대기도 공급(라이더)과 수요(주문)의 시간·지역 불일치에서 생깁니다. <strong>평균값이 아니라 수요가 몰리는 조각을 찾아</strong> 공급을 맞추겠습니다.</p></div>
-    </article>
-
-    <div class="case-group"><p class="case-group-label">PART 2 · 데이터와 AI를 더하다</p><p class="case-group-desc">삼성청년SW·AI아카데미에서 데이터와 AI로 직접 만들고 검증한 프로젝트 3건</p></div>
-
-    <!-- 05 -->
     <article class="project" id="case-gabolle">
       <div class="project-heading">
-        <div><p class="project-kind">05 / 삼성청년SW·AI아카데미 15기 · 외국인 여행 앱</p><h3>가볼래<small>GABOLLE</small></h3></div>
+        <div><p class="project-kind">03 / 삼성청년SW·AI아카데미 15기 · 외국인 여행 앱</p><h3>가볼래<small>GABOLLE</small></h3></div>
         <div class="project-meta"><p>2026.08 — 10 · PM · 출시·운영 · QA · 인프라</p><span class="award">삼성청년SW·AI아카데미 특화 프로젝트 우수상</span></div>
       </div>
       <div class="project-cols">
@@ -342,11 +339,10 @@
       </details>
       <div class="verification"><p class="verification-label">현장에 적용하면</p><p>날씨·수요 같은 외부 변수가 있는 현장에서 여러 대책을 한꺼번에 바꾸면 무엇이 효과였는지 알 수 없습니다. <strong>변수를 하나씩 바꾸며 실행 전후 효과를 측정</strong>하겠습니다.</p></div>
     </article>
-
-    <!-- 06 -->
+    <!-- 04 -->
     <article class="project" id="case-bbiyong">
       <div class="project-heading">
-        <div><p class="project-kind">06 / 삼성청년SW·AI아카데미 15기 · AI 공장 안전</p><h3>삐용<small>BBIYONG</small></h3></div>
+        <div><p class="project-kind">04 / 삼성청년SW·AI아카데미 15기 · AI 공장 안전</p><h3>삐용<small>BBIYONG</small></h3></div>
         <div class="project-meta"><p>2026.07 — 08 · 기획 · 관제 프론트엔드 · 발표</p><span class="award">삼성청년SW·AI아카데미 공통 프로젝트 우수상</span></div>
       </div>
       <div class="project-cols">
@@ -406,48 +402,150 @@
       <div class="verification"><p class="verification-label">현장에 적용하면</p><p>로봇의 안전장치를 끄지 않고 그 규칙 안에서 동작하는 방법을 찾았습니다. <strong>현장의 규칙과 제약을 먼저 이해하고, 그 안에서 실행할 수 있는 개선안</strong>을 만들겠습니다.</p></div>
     </article>
 
-    <!-- 07 -->
-    <article class="project" id="case-videoai">
+    <div class="case-group"><p class="case-group-label">PART 2 · 현장 × 데이터</p><p class="case-group-desc">현장의 문제를 데이터로 확인하고 움직인 경력 4건</p></div>
+
+    <!-- 05 -->
+    <article class="project" id="case-hyundai">
       <div class="project-heading">
-        <div><p class="project-kind">07 / 삼성청년SW·AI아카데미 15기 · 기업 연계 프로젝트</p><h3>조리로봇 학습데이터 구축<small>COOKING ROBOT DATA</small></h3></div>
-        <div class="project-meta"><p>2026.10 — 진행 중 · Gemini 판독 비용 실험 · 요리 기록 앱(개발 중)</p><span class="award">AI 절감안 2차례 실측 검증</span></div>
+        <div><p class="project-kind">05 / 해외영업 · 협력사 조율</p><h3>현대종합금속<small>BWTS · SCR · CRYOGENIC VALVE</small></h3></div>
+        <div class="project-meta"><p>2024.05 — 2025.09 · 영업부 해외영업 사원</p><span class="award">수주 목표 대비 161%</span></div>
       </div>
       <div class="project-cols">
         <div>
-          <p class="service-intro">조리로봇 학습데이터를 만들기 위해 요리 영상을 AI(Gemini)가 투입·볶기·끓이기 같은 조리 단계로 자동으로 나누는 기업 연계 프로젝트입니다. 저는 AI가 읽을 사진 수를 줄여 비용을 낮추는 실험을 맡아, 시뮬레이션이 낸 절감안을 실제 AI로 두 차례 검증하고 원인까지 분석했습니다.</p>
+          <p class="service-intro">BWTS·SCR 해외영업과 연간 사업계획, 선주사·조선소 대상 견적·계약·납기·매출·수금을 맡았습니다. 데이터로 영업 우선순위를 세웠고, 전쟁으로 공급 우려가 커졌을 때는 고객이 직접 확인할 수 있는 근거를 만들어 신규사업을 수주했습니다.</p>
           <dl class="project-facts">
-            <div><dt>담당</dt><dd>Gemini 판독 비용 실험 · 원인 분석 · 실험 보고서 양식 · 요리 기록 앱(개발 중)</dd></div>
-            <div><dt>사용 도구</dt><dd>Gemini · Claude · Python · React Native</dd></div>
+            <div><dt>담당</dt><dd>BWTS·SCR 해외영업 · 극저온 밸브 신규사업 개발</dd></div>
+            <div><dt>협업</dt><dd>선주사·조선소 · 이스라엘 공급업체 · 사내 기술·생산 부서</dd></div>
           </dl>
           <ul class="contribution-list">
-            <li><strong>시뮬레이션을 그대로 믿지 않기</strong><span>사진을 22% 덜 읽어도 된다는 시뮬레이션 결과를, 토큰 상한을 승인받은 뒤 실제 Gemini로 영상 16편을 판독해 사람이 검수한 정답 286개와 비교했습니다.</span></li>
-            <li><strong>1차: 손해를 확인하고 철회</strong><span>토큰은 22% 줄었지만 정확도(F1)가 0.709에서 0.683으로 떨어져 제 제안을 철회했습니다.</span></li>
-            <li><strong>원인 분석</strong><span>놓친 경계 24개를 하나씩 분류해 54%가 사진 간격이 넓어 아예 보지 못한 구간, 38%가 AI 판독 오류임을 찾았습니다.</span></li>
-            <li><strong>2차: 같은 날 나란히 재실측</strong><span>원인을 피한 개선안과 기존 방식을 같은 날 같은 설정으로 실행(호출 617회)했지만, 짧은 단계 손실이 남아 이 안도 기각을 제안했습니다.</span></li>
-            <li><strong>데이터를 모을 앱 (개발 중)</strong><span>AI 학습 데이터를 모으는 요리 기록 앱을 React Native로 개발하고 있습니다. 대용량 영상 업로드와 사용자가 고친 단계를 검수 후보로 내보내는 기능을 만들었습니다.</span></li>
+            <li><strong>노후 선박 데이터로 우선순위 세우기</strong><span>선사별 20년 이상 노후 선박 보유 척수를 조사해 BWTS 고객별 영업 우선순위 목록을 만들었습니다.</span></li>
+            <li><strong>대체 공급 가능 여부 확인하기</strong><span>이스라엘 공장이 멈춰도 다른 공장에서 공급할 수 있는지 먼저 확인했습니다.</span></li>
+            <li><strong>공급사와 근거 만들기</strong><span>미국·유럽 공장 대체 공급을 명시한 CEO 명의 Confirmation Letter를 확보하고, 고객 요구를 기술·생산 부서 검토 조건으로 구체화했습니다.</span></li>
           </ul>
         </div>
         <div class="followup compact">
           <div class="followup-heading"><h4>결과</h4></div>
           <dl class="result-grid">
-            <div><dt>1차 절감안 · F1 (±5초)</dt><dd><strong>0.709 → 0.683</strong><small>토큰 22%↓ · 정확도 하락으로 철회</small></dd></div>
-            <div><dt>놓친 원인</dt><dd><strong>54%</strong><small>24개 중 13개가 아예 보지 못한 구간</small></dd></div>
-            <div><dt>2차 개선안 · 짧은 단계 재현율</dt><dd><strong>0.851 → 0.770</strong><small>토큰 16%↓ · 신뢰구간 −0.163 ~ −0.013 · 기각 제안</small></dd></div>
+            <div><dt>SCR 부문 2025 수주 (9월 기준)</dt><dd><strong>113억</strong><small>목표 70억 대비 161% · 4개월 만에 연간 목표 달성</small></dd></div>
+            <div><dt>극저온 밸브 신규사업</dt><dd><strong>2건 수주</strong></dd></div>
+            
           </dl>
         </div>
       </div>
-      <section class="deep-case" aria-label="조리로봇 학습데이터 대표 사례">
-        <p class="deep-case-label">대표 사례 · 철회에서 원인 분석까지</p>
-        <h4>좋아 보이는 절감안을 두 번 실측하고, 두 번 멈췄다</h4>
+      <figure class="photo-grid"><img src="img/hd-office.jpg" alt="사무실 근무" loading="lazy"><img src="img/hd-yard.jpg" alt="조선소 현장" loading="lazy"><img src="img/hd-ship.jpg" alt="선박 현장 방문" loading="lazy"><figcaption>해외영업 사무실과 조선소 현장</figcaption></figure>
+      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>3PL 협력사와의 협상도 상대의 인력·손익·권한 제약을 먼저 이해하는 데서 시작합니다. <strong>"괜찮다"는 말 대신 상대가 확인할 수 있는 근거</strong>를 만들어 합의를 실행까지 연결하겠습니다.</p></div>
+    </article>
+    <!-- 06 -->
+    <article class="project" id="case-fns">
+      <div class="project-heading">
+        <div><p class="project-kind">06 / 물류 · 운송 운영</p><h3>FNS inc.<small>OCEAN IMPORT · LOS ANGELES</small></h3></div>
+        <div class="project-meta"><p>2022.07 — 2023.07 · 수입·물류 코디네이터 인턴</p><span class="award">4개월 단독 담당</span></div>
+      </div>
+      <div class="project-cols">
+        <div>
+          <p class="service-intro">담당 과장님의 출산휴가 동안 LG전자 고객사의 창고 간 재고 이동(Warehouse&nbsp;Transfer)을 4개월간 혼자 맡았습니다. 모든 건이 긴급했고 물량도 불규칙했습니다. 지연의 원인이 물량이 아니라 정보 흐름에 있다는 것을 찾아 업무 방식을 다시 짰습니다.</p>
+          <dl class="project-facts">
+            <div><dt>담당</dt><dd>Warehouse Transfer 전 과정 · 데일리 트래킹 · 통관 서류 · 정산</dd></div>
+            <div><dt>협업</dt><dd>LG 고객사 · 8개 창고 · 트럭킹 회사 · 사내 팀</dd></div>
+          </dl>
+          <ul class="contribution-list">
+            <li><strong>3개월 치 메일 전부 분류하기</strong><span>주문 1건당 평균 20건의 메일 중 6건 이상이 창고 정보나 화물 상태를 묻는 내용이었습니다.</span></li>
+            <li><strong>창고 8곳 정보 정리하기</strong><span>창고마다 직접 연락해 운영시간·담당자·특이사항을 매뉴얼로 만들었습니다.</span></li>
+            <li><strong>묻기 전에 공유하기</strong><span>트럭킹사에 출하 가능 시간·서류를 미리 보내고, 매일 아침 운송 현황표를 고객사에 먼저 공유했습니다.</span></li>
+          </ul>
+        </div>
+        <div class="followup compact">
+          <div class="followup-heading"><h4>결과</h4></div>
+          <dl class="result-grid">
+            <div><dt>운송 납기 준수율</dt><dd><strong>95%+</strong><small>단독 담당 4개월 기준</small></dd></div>
+            <div><dt>업무 메일</dt><dd><strong>30%↓</strong><small>사전 공유 전후 주문당 메일 수 비교</small></dd></div>
+            <div><dt>Warehouse Transfer 매출</dt><dd><strong>18%↑</strong><small>고객사 위탁 물량이 늘어 4개월 순수익 1억 1,600만 원</small></dd></div>
+          </dl>
+        </div>
+      </div>
+      <figure class="photo-grid"><img src="img/fns-office.jpg" alt="FNS inc. LA 사무소" loading="lazy"><img src="img/fns-entrance.jpg" alt="사무소 앞 팀원들" loading="lazy"><img src="img/fns-team.jpg" alt="회사 행사" loading="lazy"><figcaption>FNS inc. LA 사무소와 Ocean Import 팀</figcaption></figure>
+      <section class="deep-case" aria-label="FNS 대표 사례">
+        <p class="deep-case-label">대표 사례 · 첫 판단에서 원인까지</p>
+        <h4>지연은 물량이 아니라 '누가 무엇을 모르는가'에서 생겼다</h4>
         <ol>
-          <li><span>첫 판단</span><p>시뮬레이션에서 AI가 읽는 사진을 22% 줄여도 정답 경계를 거의 그대로 찾았습니다. 하지만 AI가 사진을 완벽하게 읽는다는 가정이었습니다.</p></li>
-          <li><span>1차 실측</span><p>실제 Gemini로 영상 16편을 판독해 정답 286개와 비교하고, 차이가 우연인지 영상 단위 신뢰구간으로 확인했습니다. F1이 0.709에서 0.683으로 떨어져 제안을 철회했습니다.</p></li>
-          <li><span>원인 분석</span><p>놓친 경계를 분류하니 절반 이상이 사진 간격이 넓어져 아예 보지 못한 구간이었습니다.</p></li>
-          <li><span>2차 실측</span><p>간격은 그대로 두고 후보 주변만 줄인 개선안을, 기존 방식과 같은 날 나란히 실행했습니다. 토큰은 16% 줄었지만 짧은 단계 재현율이 0.851에서 0.770으로 떨어졌습니다.</p></li>
-          <li><span>결정</span><p>시뮬레이션이 두 번 모두 실제 손실을 작게 예측했다는 점을 근거로, 실측 없이 판독 기준을 바꾸지 않는다는 원칙을 보고서로 남겼습니다(팀 결정 전 제안).</p></li>
+          <li><span>증상</span><p>긴급 건마다 메일이 오가며 대응이 늦어지고, 트럭이 창고 앞에서 대기하며 추가 비용이 생길 위험이 있었습니다.</p></li>
+          <li><span>원인 추적</span><p>과장님이 주고받은 최근 3개월 치 메일을 유형별로 나눴습니다.<br>창고 정보나 화물 상태를 뒤늦게 묻는 메일이 전체의 30%를 넘었습니다.</p></li>
+          <li><span>검토한 방법</span><p>다른 부서의 업무 절차를 참고해, 자주 묻는 정보를 미리 정리해 둘 수 있는지 확인했습니다.</p></li>
+          <li><span>해결</span><p>창고 정보 매뉴얼과 아침 현황표로 상대가 묻기 전에 알 수 있게 했습니다. 예정 시간에 맞춰 출하해 트럭 대기 비용도 막았습니다.</p></li>
         </ol>
       </section>
-      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>AI 분석이 좋은 숫자를 내도 현장 원자료와 대조하기 전에는 결정하지 않겠습니다. <strong>비용 절감 뒤에 놓치는 주문이나 지연은 없는지</strong> 함께 측정하고, 틀리면 원인을 찾아 다시 시험하겠습니다.</p></div>
+      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>라스트마일 지연도 정보의 빈틈에서 생깁니다. <strong>협력사·라이더·유관 조직이 묻기 전에 알 수 있는 흐름</strong>을 만들고, 반복 공유 업무는 AI로 자동화하겠습니다.</p></div>
+    </article>
+    <!-- 07 -->
+    <article class="project" id="case-delonghi">
+      <div class="project-heading">
+        <div><p class="project-kind">07 / 마케팅 · 고객 데이터</p><h3>드롱기코리아<small>DE'LONGHI KOREA</small></h3></div>
+        <div class="project-meta"><p>2022.03 — 07 · 디지털 마케팅팀 인턴</p><span class="award">매출 12%↑</span></div>
+      </div>
+      <div class="project-cols">
+        <div>
+          <p class="service-intro">판촉을 했는데도 신제품 커피머신 매출이 오르지 않았습니다. 홍보가 부족하다는 첫 판단을 내려놓고 고객 데이터와 매장을 대조해, 고객이 사기 전에 제품을 직접 써 볼 기회가 없다는 원인을 찾았습니다.</p>
+          <dl class="project-facts">
+            <div><dt>담당</dt><dd>CRM 데이터 분석 · 매장 현장 조사 · 응대 매뉴얼 개선</dd></div>
+            <div><dt>협업</dt><dd>마케팅팀 · 백화점 매장 매니저</dd></div>
+          </dl>
+          <ul class="contribution-list">
+            <li><strong>연령대별로 나눠 보기</strong><span>신제품 구매자 중 50~60대는 22%뿐이었고, 같은 연령대에서 "다루기 어렵다"는 문의가 10건 있었습니다.</span></li>
+            <li><strong>매장 4곳 직접 비교하기</strong><span>경쟁사 매장에서는 고객이 머신을 직접 조작했지만, 자사 매장은 설명과 시음에서 끝났습니다.</span></li>
+            <li><strong>응대 방식 바꾸기</strong><span>매장 매니저와 체험형 응대 매뉴얼을 만들어 교육하고, 바리스타 커피클래스를 기획했습니다.</span></li>
+          </ul>
+        </div>
+        <div class="followup compact">
+          <div class="followup-heading"><h4>결과</h4></div>
+          <dl class="result-grid">
+            <div><dt>매출</dt><dd><strong>12%↑</strong></dd></div>
+            <div><dt>커피클래스 만족도</dt><dd><strong>90%+</strong></dd></div>
+          </dl>
+        </div>
+      </div>
+      <figure class="photo-grid"><img src="img/dl-store.jpg" alt="드롱기 매장" loading="lazy"><img src="img/dl-office.jpg" alt="디지털 마케팅팀 사무실" loading="lazy"><img src="img/dl-shoot.jpg" alt="사용법 영상 촬영" loading="lazy"><figcaption>드롱기 매장 · 디지털 마케팅팀 · 커피클래스 진행 · 사용법 영상 촬영</figcaption></figure>
+      <section class="deep-case" aria-label="드롱기 대표 사례">
+        <p class="deep-case-label">대표 사례 · 첫 판단에서 원인까지</p>
+        <h4>"덜 알려져서 안 팔린다"가 아니었다</h4>
+        <ol>
+          <li><span>증상</span><p>6주간 VIP 추천인 프로모션을 진행했지만 신제품 매출에 의미 있는 변화가 없었습니다.</p></li>
+          <li><span>다시 의심한 것</span><p>판촉이 통하지 않았다면 원인을 잘못 짚은 것이라 보고, CRM 데이터를 연령대별로 다시 나눴습니다.</p></li>
+          <li><span>현장 확인</span><p>고가 제품이 백화점에서 주로 팔린다는 점에 주목해 4개 백화점의 경쟁사·자사 매장 응대를 직접 비교했습니다.</p></li>
+          <li><span>진짜 원인</span><p>고객이 사기 전에 머신을 직접 조작해 보지 못해, 쓰기 어렵다고 느끼고 구매를 망설이고 있었습니다.</p></li>
+          <li><span>해결</span><p>판촉을 멈추고 체험 마케팅으로 바꿨습니다. 매장에서 고객이 커피머신을 직접 조작해 커피를 내려 보도록 응대 방식을 바꾸고, 바리스타와 함께하는 커피클래스를 열었습니다.</p></li>
+        </ol>
+      </section>
+      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>"주문이 몰려서 지연된다"는 첫 판단을 그대로 믿지 않겠습니다. <strong>지표를 시간대·거리·권역별로 나눠 보고, 현장에서 반대 증거를 찾아</strong> 진단을 검증하겠습니다.</p></div>
+    </article>
+    <!-- 08 -->
+    <article class="project" id="case-veranda">
+      <div class="project-heading">
+        <div><p class="project-kind">08 / 플랫폼 운영 · 수요와 공급</p><h3>베란다<small>VERANDA · TRAVEL PLATFORM</small></h3></div>
+        <div class="project-meta"><p>2018.12 — 2019.02 · 여행사업팀 현장실습</p><span class="award">취소율 50% → 0%</span></div>
+      </div>
+      <div class="project-cols">
+        <div>
+          <p class="service-intro">최근 4개월간 여행상품 평균 취소율이 50%였고, 전월에는 14개 상품 중 7개가 취소돼 290만 원의 영업손실이 났습니다. "상품 수를 줄이면 안 된다"는 기존 운영 방식을 의심했고, 수요보다 많은 상품이 신청 인원을 흩어 놓고 있다는 것을 찾았습니다.</p>
+          <dl class="project-facts">
+            <div><dt>담당</dt><dd>여행 플랫폼 상품 운영 · 실적 분석 · 개선 제안</dd></div>
+            <div><dt>협업</dt><dd>이사님 · IT팀 · 장년층 고객</dd></div>
+          </dl>
+          <ul class="contribution-list">
+            <li><strong>자사와 타사 상품 비교하기</strong><span>자사 4개월 실적과 3개 여행사 상품 20건을 비교해, 계절 특성 상품에 수요가 몰린다는 패턴을 찾았습니다.</span></li>
+            <li><strong>비교 근거로 제안하기</strong><span>인턴이었지만 비교 결과를 근거로 이사님께 인기 상품 중심 운영을 제안해, 6개 상품으로 재편했습니다.</span></li>
+            <li><strong>수요를 보이게 만들기</strong><span>IT팀과 협업해 상품 조회 시 현재 신청 인원을 볼 수 있게 했습니다.</span></li>
+          </ul>
+        </div>
+        <div class="followup compact">
+          <div class="followup-heading"><h4>결과</h4></div>
+          <dl class="result-grid">
+            <div><dt>여행상품 취소율</dt><dd><strong>50% → 0%</strong><small>재편한 6개 상품 모두 정원을 채워 출발</small></dd></div>
+            <div><dt>매출</dt><dd><strong>2배</strong></dd></div>
+            <div><dt>영업이익</dt><dd><strong>흑자 전환</strong></dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="verification"><p class="verification-label">현장에 적용하면</p><p>배달 대기도 공급(라이더)과 수요(주문)의 시간·지역 불일치에서 생깁니다. <strong>평균값이 아니라 수요가 몰리는 조각을 찾아</strong> 공급을 맞추겠습니다.</p></div>
     </article>
 
   </div>
