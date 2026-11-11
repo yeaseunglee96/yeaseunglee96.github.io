@@ -100,6 +100,7 @@
 @media print{.kpis{break-inside:avoid}.project-detail.more[open]{display:block}}
 .fit-tags{margin:18px 0 0;font-size:14px;color:var(--ink-700,#4A4F58)}
 .fit-tags span{display:inline-block;margin-right:10px;font-size:12px;font-weight:800;color:var(--accent)}
+.more-label{margin:22px 0 8px;font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.04em}
 </style>
 </head>
 <body>
@@ -158,7 +159,7 @@
     </div>
     <div class="fit-table" role="table" aria-label="담당업무별 근거">
       <div class="fit-row fit-head" role="row"><span role="columnheader">공고 담당업무</span><span role="columnheader">근거</span><span role="columnheader">사례</span></div>
-      <div class="fit-row" role="row"><strong role="cell">디지털/IT 컨설팅</strong><p role="cell">기업 요구 → 기획·합의 → 구축 → 데이터 전달까지 4주 수행</p><a role="cell" href="#case-cookingtable">쿠킹테이블</a></div>
+      <div class="fit-row" role="row"><strong role="cell">디지털/IT 컨설팅</strong><p role="cell">AI 도입안을 실측으로 진단해 운영 모델 권고 · 시니어 고객 맞춤 금융 서비스 설계·구축</p><a role="cell" href="#case-cookingtable">쿠킹테이블 · 똑닥</a></div>
       <div class="fit-row" role="row"><strong role="cell">신규 기관 설립 · 규제 대응</strong><p role="cell">개인정보처리방침·약관, 영상별 동의·철회 즉시 삭제·30일 보관 정책 설계</p><a role="cell" href="#case-cookingtable">쿠킹테이블</a></div>
       <div class="fit-row" role="row"><strong role="cell">IT 진단 · 디지털/IT 전략</strong><p role="cell">금융 서비스 지식 그래프 600 → 53 재설계, AI 비용 절감안을 실측으로 검증</p><a role="cell" href="#case-ddokdak">똑닥</a></div>
       <div class="fit-row" role="row"><strong role="cell">PI · 요건정의</strong><p role="cell">기업 요구를 작업 109건으로 분해, 업무 흐름 재설계로 메일 30%↓</p><a role="cell" href="#case-cookingtable">쿠킹테이블 · FNS</a></div>
@@ -179,8 +180,8 @@
     </div>
 
     <nav class="project-shortcuts" aria-label="사례 바로가기">
-      <a href="#case-cookingtable"><span class="shortcut-number">01</span><strong>쿠킹테이블</strong><span>요건정의 → 구축 → 데이터 전달</span><span aria-hidden="true">↓</span></a>
-      <a href="#case-ddokdak"><span class="shortcut-number">02</span><strong>똑닥</strong><span>디지털 금융 · IT 진단</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-cookingtable"><span class="shortcut-number">01</span><strong>쿠킹테이블</strong><span>AI 컨설팅 · 도입안 진단·권고</span><span aria-hidden="true">↓</span></a>
+      <a href="#case-ddokdak"><span class="shortcut-number">02</span><strong>똑닥</strong><span>고객 맞춤 금융 서비스</span><span aria-hidden="true">↓</span></a>
       <a href="#case-gabolle"><span class="shortcut-number">03</span><strong>가볼래</strong><span>운영효율화 · 출시</span><span aria-hidden="true">↓</span></a>
       <a href="#case-hyundai"><span class="shortcut-number">04</span><strong>현대종합금속</strong><span>이해관계자 조율 · 수주</span><span aria-hidden="true">↓</span></a>
       <a href="#case-fns"><span class="shortcut-number">05</span><strong>FNS inc.</strong><span>프로세스 개선(PI)</span><span aria-hidden="true">↓</span></a>
@@ -191,13 +192,24 @@
     <!-- 01 -->
     <article class="project" id="case-cookingtable">
       <div class="project-heading">
-        <div><p class="project-kind">01 / 디지털/IT 컨설팅 · 요건정의 · 구축 · 데이터 거버넌스</p><h3>쿠킹테이블<small>ROBOTABLE × SSAFY</small></h3></div>
-        <div class="project-meta"><p>2026.10.15 — 11.11 · 기획 · 백엔드 · QA · PMO · 팀 7명</p><span class="award metric">634MB 실영상 전달 확인</span></div>
+        <div><p class="project-kind">01 / AI 컨설팅 · AI 도입 방식 진단 · 근거 기반 권고 · 구축</p><h3>쿠킹테이블<small>ROBOTABLE × SSAFY</small></h3></div>
+        <div class="project-meta"><p>2026.10.15 — 11.11 · 기획 · 백엔드 · QA · PMO · 팀 7명</p><span class="award metric">AI 도입안 실측 검증</span></div>
       </div>
-      <dl class="consult" aria-label="한눈에 보기"><div><dt>과제</dt><dd>기업(로보터블)이 로봇 학습용 실제 가정 조리 데이터를 확보해야 함</dd></div><div><dt>진단</dt><dd>요구를 앱 작업 109건으로 분해하고, AI 판독 방식을 시뮬레이션·실측으로 비교</dd></div><div><dt>해결</dt><dd>참여형 앱·서버 구축, 동의·삭제 정책 설계, 전수 QA로 결함 29건 수정</dd></div><div><dt>효과</dt><dd>1080p 실영상 634MB + 라벨 7단계를 기업에 전달 확인</dd></div></dl>
-      <div class="kpis"><div><strong>174건</strong><span>Jira 담당 작업</span><small>완료 162 · 408 포인트</small></div><div><strong>198건</strong><span>GitLab 병합 MR</span><small>커밋 262 · 팀 7명 중 3위</small></div><div><strong>29건</strong><span>QA로 찾아 고친 결함</span><small>웹 3 · 앱 10 · 서버 11 · 실기기 4 · 외부 API 1</small></div><div><strong>634MB</strong><span>실제 전달 확인</span><small>1080p 영상 1편 + 라벨 7단계</small></div></div>
+      <dl class="consult" aria-label="한눈에 보기"><div><dt>과제</dt><dd>조리 로봇 기업이 로봇 학습 데이터를 AI로 싸고 정확하게 만들 방법을 찾음</dd></div><div><dt>진단</dt><dd>AI 판독 방식을 시뮬레이션과 실측(영상 16편 · 정답 286개)으로 비교하고, 모델을 품질·시간·영상당 비용으로 벤치마크</dd></div><div><dt>권고·해결</dt><dd>운영 모델과 하루 호출 한도를 정하고, 품질을 떨어뜨리는 비용 절감안 2건은 기각 권고. 수집 앱·서버·동의 정책까지 구축</dd></div><div><dt>효과</dt><dd>"실측 없이 판독 기준을 바꾸지 않는다" 원칙 수립, 1080p 실영상 634MB + 라벨 7단계를 기업에 전달</dd></div></dl>
+      <div class="kpis"><div><strong>16편</strong><span>실제 AI 판독 검증</span><small>사람이 검수한 정답 286개와 대조</small></div><div><strong>0.709 → 0.683</strong><span>1차 절감안 정확도(F1)</span><small>토큰 22%↓에도 품질 하락 → 기각 권고</small></div><div><strong>0.851 → 0.770</strong><span>2차 개선안 짧은 단계 재현율</span><small>같은 날 나란히 재실측(호출 617회) → 기각 권고</small></div><div><strong>634MB</strong><span>기업 전달 확인</span><small>1080p 영상 1편 + 라벨 7단계</small></div></div>
+      <section class="deep-case" aria-label="쿠킹테이블 대표 사례 3">
+        <p class="deep-case-label">대표 사례 1 · AI 도입안을 실측으로 진단하고 권고하기</p>
+        <h4>좋아 보이는 AI 비용 절감안을 두 번 실측하고, 두 번 멈췄다</h4>
+        <ol>
+          <li><span>첫 판단</span><p>시뮬레이션에서 AI(Gemini)가 읽는 사진을 22% 줄여도 정답 경계를 거의 그대로 찾았습니다. 하지만 AI가 사진을 완벽하게 읽는다는 가정이었습니다.</p></li>
+          <li><span>1차 실측</span><p>토큰 상한을 승인받아 실제 Gemini로 영상 16편을 판독하고, 사람이 검수한 정답 286개와 비교했습니다. 토큰은 22% 줄었지만 F1이 0.709에서 0.683으로 떨어져 제안을 철회했습니다.</p></li>
+          <li><span>원인 분석</span><p>놓친 경계 24개를 분류하니 54%가 사진 간격이 넓어 아예 보지 못한 구간, 38%가 AI 판독 오류였습니다.</p></li>
+          <li><span>2차 실측</span><p>간격은 그대로 두고 후보 주변만 줄인 개선안을 기존 방식과 같은 날 같은 설정으로 실행(호출 617회)했습니다. 토큰은 16% 줄었지만 짧은 단계 재현율이 0.851에서 0.770으로 떨어져 이 안도 기각을 제안했습니다.</p></li>
+          <li><span>결정</span><p>실측 없이 판독 기준을 바꾸지 않는다는 원칙을 보고서로 남겼습니다(팀 결정 전 제안).</p></li>
+        </ol>
+      </section>
       <section class="deep-case" aria-label="쿠킹테이블 대표 사례 1">
-        <p class="deep-case-label">대표 사례 1 · 기업 미팅 시연 당일</p>
+        <p class="deep-case-label">대표 사례 2 · 권고안을 실제 운영 조건에서 검증하기</p>
         <h4>시험에서는 통과한 업로드가, 실제 휴대폰 영상은 한 편도 받지 못했다</h4>
         <ol>
           <li><span>첫 판단</span><p>업로드 서버와 동의 화면이 배포됐고 자동 시험 251개가 통과했으니, 시연 준비가 끝났다고 봤습니다.</p></li>
@@ -206,15 +218,7 @@
           <li><span>해결</span><p>업로드 한도를 4GB·4K·HEVC로 넓히고(DB 제약 마이그레이션 포함) 읽기 코드를 고쳐 같은 날 배포했습니다. 634MB 영상이 3분 만에 올라가 <code>영상 .mp4</code> + <code>라벨 .csv</code> + <code>해시 목록표</code>로 내보내졌습니다.</p></li>
         </ol>
       </section>
-      <section class="deep-case" aria-label="쿠킹테이블 대표 사례 2">
-        <p class="deep-case-label">대표 사례 2 · 출시 전 전체 QA</p>
-        <h4>금융 서비스였다면 사고였을 "출금 두 번 지급"을 출시 전에 막았다</h4>
-        <ol>
-          <li><span>증상</span><p>포인트 받기 요청이 겹치면 같은 출금이 두 번 처리될 수 있었고, 송금 중 멈춘 건은 계속 "보내는 중"으로 남았습니다.</p></li>
-          <li><span>원인 추적</span><p>출금 처리 작업과 관리자 승인이 같은 건을 동시에 집을 수 있었습니다. 선점이 원자적이지 않았습니다.</p></li>
-          <li><span>해결</span><p>DB 함수로 한 번에 선점(<code>claim_payout</code>)하고, 10분 넘게 멈춘 송금은 다시 확인하도록 바꿔 시험 163개로 확인했습니다. 리워드 기능은 팀원 담당이며 저는 이 결함 수정을 맡았습니다.</p></li>
-        </ol>
-      </section>
+      
       <figure class="phone-row seven" aria-label="쿠킹테이블 앱 화면">
         <img src="img/ct-home.jpg" alt="홈 화면: 요리 점수와 요리 찍기 버튼" loading="lazy">
         <img src="img/ct-steps.jpg" alt="AI가 나눈 7단계 보기" loading="lazy">
@@ -240,30 +244,38 @@
         <li><b>구축·배포</b><span>앱, 서버, DB, 로그인, 조각 업로드, 외부 게시 API를 운영 서버에 배포</span></li>
         <li><b>진단·QA</b><span>웹 18화면·서버 API·실기기 전수 점검, 결함 29건 수정과 보고서</span></li>
         <li><b>데이터 전달</b><span>동의 영상 업로드, 영상+라벨 내보내기, 30일 보관·철회 삭제 정책</span></li>
-      </ol><section class="deep-case" aria-label="쿠킹테이블 대표 사례 3">
-        <p class="deep-case-label">대표 사례 3 · 실험으로 방법 고르기</p>
-        <h4>좋아 보이는 AI 비용 절감안을 두 번 실측하고, 두 번 멈췄다</h4>
+      </ol><p class="more-label">프로젝트 관리 · 품질 지표 (2026-11-11 Jira·GitLab 기준)</p><div class="kpis"><div><strong>174건</strong><span>Jira 담당 작업</span><small>완료 162 · 408 포인트</small></div><div><strong>198건</strong><span>GitLab 병합 MR</span><small>커밋 262 · 팀 7명 중 3위</small></div><div><strong>29건</strong><span>QA로 찾아 고친 결함</span><small>웹 3 · 앱 10 · 서버 11 · 실기기 4 · 외부 API 1</small></div><div><strong>634MB</strong><span>실제 전달 확인</span><small>1080p 영상 1편 + 라벨 7단계</small></div></div><section class="deep-case" aria-label="쿠킹테이블 대표 사례 2">
+        <p class="deep-case-label">대표 사례 2 · 출시 전 전체 QA</p>
+        <h4>금융 서비스였다면 사고였을 "출금 두 번 지급"을 출시 전에 막았다</h4>
         <ol>
-          <li><span>첫 판단</span><p>시뮬레이션에서 AI(Gemini)가 읽는 사진을 22% 줄여도 정답 경계를 거의 그대로 찾았습니다. 하지만 AI가 사진을 완벽하게 읽는다는 가정이었습니다.</p></li>
-          <li><span>1차 실측</span><p>토큰 상한을 승인받아 실제 Gemini로 영상 16편을 판독하고, 사람이 검수한 정답 286개와 비교했습니다. 토큰은 22% 줄었지만 F1이 0.709에서 0.683으로 떨어져 제안을 철회했습니다.</p></li>
-          <li><span>원인 분석</span><p>놓친 경계 24개를 분류하니 54%가 사진 간격이 넓어 아예 보지 못한 구간, 38%가 AI 판독 오류였습니다.</p></li>
-          <li><span>2차 실측</span><p>간격은 그대로 두고 후보 주변만 줄인 개선안을 기존 방식과 같은 날 같은 설정으로 실행(호출 617회)했습니다. 토큰은 16% 줄었지만 짧은 단계 재현율이 0.851에서 0.770으로 떨어져 이 안도 기각을 제안했습니다.</p></li>
-          <li><span>결정</span><p>실측 없이 판독 기준을 바꾸지 않는다는 원칙을 보고서로 남겼습니다(팀 결정 전 제안).</p></li>
+          <li><span>증상</span><p>포인트 받기 요청이 겹치면 같은 출금이 두 번 처리될 수 있었고, 송금 중 멈춘 건은 계속 "보내는 중"으로 남았습니다.</p></li>
+          <li><span>원인 추적</span><p>출금 처리 작업과 관리자 승인이 같은 건을 동시에 집을 수 있었습니다. 선점이 원자적이지 않았습니다.</p></li>
+          <li><span>해결</span><p>DB 함수로 한 번에 선점(<code>claim_payout</code>)하고, 10분 넘게 멈춘 송금은 다시 확인하도록 바꿔 시험 163개로 확인했습니다. 리워드 기능은 팀원 담당이며 저는 이 결함 수정을 맡았습니다.</p></li>
         </ol>
       </section></div></details>
-      <div class="verification"><p class="verification-label">IT 컨설팅에 적용하면</p><p>요건은 시험 데이터가 아니라 실제 고객 데이터로 검증해야 합니다. <strong>코어뱅킹 전환 같은 프로젝트에서도 실데이터 리허설이 일정의 위험을 가장 먼저 드러낸다</strong>고 생각합니다. 구현은 제가 설계·지시하고 AI 코딩 에이전트가 작성한 코드를 시험과 실기기로 검증한 뒤 병합하는 방식으로 진행했습니다.</p></div>
+      <div class="verification"><p class="verification-label">금융 IT 컨설팅에 적용하면</p><p>금융권의 생성형 AI 도입도 비용 절감 수치만으로 결정할 수 없습니다. <strong>고객의 실제 데이터로 효과와 손실을 함께 측정하고, 근거가 부족하면 도입하지 말자고 권고</strong>하는 것까지가 AI 컨설팅이라고 생각합니다. 구현은 제가 설계·지시하고 AI 코딩 에이전트가 작성한 코드를 시험과 실기기로 검증한 뒤 병합하는 방식으로 진행했습니다.</p></div>
     </article>
 
     <!-- 02 -->
     <article class="project" id="case-ddokdak">
       <div class="project-heading">
-        <div><p class="project-kind">02 / 디지털 금융 · IT 진단 · 무중단 전환 설계</p><h3>똑닥<small>DDOKDAK · AI 금융 코칭</small></h3></div>
+        <div><p class="project-kind">02 / 금융 IT 컨설팅 · 고객 맞춤 금융 서비스 설계 · 구축</p><h3>똑닥<small>DDOKDAK · AI 금융 코칭</small></h3></div>
         <div class="project-meta"><p>2026.05.27 — 06.26 · 기획 · 프론트엔드 · AI · DB</p><span class="award metric">실서비스 배포·운영</span></div>
       </div>
-      <dl class="consult" aria-label="한눈에 보기"><div><dt>과제</dt><dd>시니어가 자기 수준에 맞는 금융 정보를 고르기 어려움</dd></div><div><dt>진단</dt><dd>지식 그래프가 노드 600개·연결 0개로 진단 불가능한 상태임을 발견</dd></div><div><dt>해결</dt><dd>개념 53개·관계 71개로 재설계, 기존 기능은 유지한 채 독립 모듈로 병행 전환</dd></div><div><dt>효과</dt><dd>진단 → 추천 흐름 완성, 실서비스 배포·운영</dd></div></dl>
-      <div class="kpis"><div><strong>600 → 53</strong><span>지식 그래프 재설계</span><small>흩어진 노드를 핵심 개념으로 재분류 · 분류 실패 0건</small></div><div><strong>0 → 71</strong><span>개념 간 관계</span><small>개념별 학습 영상 구간 394개 연결</small></div><div><strong>전체 복구</strong><span>인증 장애</span><small>로그인 후 저장 요청 403 · 토큰 발급 지점 1곳으로 원인 특정</small></div></div>
-      <section class="deep-case" aria-label="똑닥 대표 사례">
-        <p class="deep-case-label">대표 사례 · 첫 판단에서 원인까지</p>
+      <dl class="consult" aria-label="한눈에 보기"><div><dt>과제</dt><dd>시니어 고객은 자기 금융 이해도에 맞는 상품과 정보를 고르기 어려움</dd></div><div><dt>진단</dt><dd>고객이 무엇을 알고 무엇을 모르는지 측정하는 단계가 없어, 모든 고객에게 같은 상품 목록이 보임</dd></div><div><dt>권고·해결</dt><dd>가입 직후 18문항 진단 → 900문항으로 개념별 숙련도 갱신 → 추천에 반영. 금감원 공시 예·적금과 보유자산 진단(처방전) 연결</dd></div><div><dt>효과</dt><dd>고객 수준에 따라 추천이 달라지는 금융 코칭 서비스를 배포·운영</dd></div></dl>
+      <div class="kpis"><div><strong>18문항</strong><span>가입 직후 금융 이해도 진단</span><small>입문 · 초급 · 중급 · 고급 4단계</small></div><div><strong>900문항</strong><span>실제 금융 규제로 만든 문제 은행</span><small>DTI 등 · 채점·보상은 서버에서 통제</small></div><div><strong>53 · 71</strong><span>금융 개념 · 관계 재설계</span><small>노드 600개 · 연결 0개 구조를 재구성</small></div><div><strong>9개</strong><span>고객 기능</span><small>퀴즈 · 예적금 · 처방전 · 주식/ETF · 금융신경망 등</small></div></div>
+      <section class="deep-case" aria-label="똑닥 대표 사례 1">
+        <p class="deep-case-label">대표 사례 1 · 고객에게 필요한 서비스 정의</p>
+        <h4>같은 상품 목록 대신, 고객의 이해도에 맞춰 추천이 달라지는 흐름을 설계하다</h4>
+        <ol>
+          <li><span>고객 문제</span><p>모든 사용자에게 같은 상품 목록을 보여 주면 시니어 고객은 무엇이 자기에게 맞는지 고르기 어렵습니다.</p></li>
+          <li><span>진단</span><p>추천의 기준이 되는 "이 고객이 무엇을 알고 무엇을 모르는지"를 측정하는 단계가 없었습니다.</p></li>
+          <li><span>설계</span><p>가입 직후 18문항으로 4단계 수준을 진단하고, 이후 900문항 퀴즈 결과로 개념별 숙련도를 갱신해 추천에 반영했습니다. 보유자산은 "처방전"으로 진단하고, 투자 권유가 아닌 참고용 진단이라는 고지를 넣었습니다.</p></li>
+          <li><span>통제</span><p>채점은 서버에서만 하고 같은 문제로 포인트를 반복해 받지 못하게 막았습니다. 외부 AI 응답이 늦어도 보유자산 구조만으로 기본 리스크 리포트가 발행되게 했습니다.</p></li>
+        </ol>
+      </section>
+      <section class="deep-case" aria-label="똑닥 대표 사례 2">
+        <p class="deep-case-label">대표 사례 2 · 추천의 기반 구조 진단</p>
         <h4>노드 600개가 흩어진 지식 그래프를 53개 개념 구조로 다시 묶다</h4>
         <ol>
           <li><span>첫 판단</span><p>퀴즈 약점마다 노드를 만들었으니 그래프가 사용자의 약점을 보여 줄 것이라 생각했습니다.</p></li>
@@ -294,7 +306,7 @@
             <li><strong>멈추지 않고 옮기는 전환</strong><span>새 지식 그래프를 기존 코드를 고치지 않는 독립 모듈로 붙이고, 개발용 SQLite와 배포용 MySQL을 설정값 하나로 바꾸게 했습니다.</span></li>
             <li><strong>생성형 AI를 금융 업무에 적용</strong><span>게시글 검열·종목 판별·포트폴리오 진단·상품 추천에 LLM을 붙이고, 챗봇에 내부 데이터 검색(RAG)과 응답 통제(guardrail)를 넣었습니다. AI가 늦어도 리포트 발행이 멈추지 않게 대체 동작을 정했습니다.</span></li>
           </ul><div class="project-links"><a class="button button-small" href="https://ddokdak.duckdns.org/" target="_blank" rel="noopener">ddokdak.duckdns.org 열어 보기 ↗</a></div></div></details>
-      <div class="verification"><p class="verification-label">IT 컨설팅에 적용하면</p><p>코어뱅킹 현대화처럼 레거시를 바로 끌 수 없는 전환에서는 <strong>참조 관계를 먼저 확인하고 신·구 시스템을 나란히 운영</strong>해야 합니다. 증상과 원인을 분리하고, 재발 조건을 운영 문서로 남기겠습니다.</p></div>
+      <div class="verification"><p class="verification-label">금융 IT 컨설팅에 적용하면</p><p>금융 서비스는 기능 목록이 아니라 <strong>고객이 무엇을 이해하고 무엇을 어려워하는지에서 출발</strong>해야 합니다. 고객 여정과 금융소비자 보호 요건을 함께 정의하고, 코어뱅킹 현대화처럼 기존 기능을 멈출 수 없는 전환에서는 참조 관계를 먼저 확인해 신·구 시스템을 병행하겠습니다.</p></div>
     </article>
 
     <!-- 03 -->
